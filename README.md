@@ -1,5 +1,5 @@
-# Plantilla-ST1
-Plantilla ST1
+# Plantilla-CTS
+Plantilla CTS
 
 Documentación Pendiente
 
