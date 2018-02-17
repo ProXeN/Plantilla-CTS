@@ -86,7 +86,7 @@ mission_require_extraction = [side_a_side];
 
 // Extraction objects for each side. Can be a Game Logic or regular vehicle/object.
 
-mission_extraction_points_a = ["blu_extraction_1"];
+mission_extraction_points_a = [];
 mission_extraction_points_b = [];
 mission_extraction_points_c = [];
 

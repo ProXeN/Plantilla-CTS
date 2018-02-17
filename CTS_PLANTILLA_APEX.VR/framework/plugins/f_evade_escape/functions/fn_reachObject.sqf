@@ -1,33 +1,30 @@
-
 if (!isServer) exitWith {};
 
-waitUntil{(time > 3)};
+[{(time > 3)}, {
+    params["_list", "_obj", "_safeDistance", "_code"];
 
-private ["_grp","_obj","_safeDistance","_alive","_safe","_end"];
+    private _grp = [];
+    { _grp pushBack (call compile format ["%1", _x]) } forEach _list;
 
-_grp = [];
-{ _grp pushBack (call compile format ["%1", _x]) } forEach (_this select 0);
+    _waitingToReachObjective = [{
+        params["_args", "_PFHhandle"];
+        _args params["_grp", "_obj", "_safeDistance", "_code"];
 
-_obj = _this select 1;
-_safeDistance = _this select 2;
-_code = _this select 3;
-
-while {true} do {
-
-    _alive = 0;
-    { _alive = _alive + ({alive _x} count (units _x)) } forEach _grp;
-    if (_alive == 0) exitWith {};
-
-    {
-        _y = _x;
-        _safe = 0;
+        private _alive = 0;
+        { _alive = _alive + ({alive _x} count (units _x)) } forEach _grp;
 
         {
-            _safe = _safe + ({(_x distance2D _y) < _safeDistance} count (units _x));
-        } forEach _grp;
+            private _y = _x;
+            private _safe = 0;
 
-        if (_alive == _safe) exitWith { call compile _code };
-    } forEach _obj;
+            {
+                _safe = _safe + ({ (_x distance2D _y < _safeDistance) && ((alive _x) && !(_x getVariable ["isDead", false])) } count (units _x));
+            } forEach _grp;
 
-    sleep 10;
-};
+            if (_alive == _safe) exitWith {
+                [_PFHhandle] call CBA_fnc_removePerFrameHandler;
+                call compile _code;
+            };
+        } forEach _obj;
+    }, 10, [_grp, _obj, _safeDistance, _code]] call CBA_fnc_addPerFrameHandler;
+}, _this] call CBA_fnc_waitUntilAndExecute;

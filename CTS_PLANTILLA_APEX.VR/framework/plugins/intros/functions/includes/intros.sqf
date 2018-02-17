@@ -32,7 +32,7 @@ case "CINEMA": {
 };
 
 case "CTS": {
-    CTS_MissionIntroImage = "mission\images\group-logo.paa";
+    CTS_MissionIntroImage = "\CTS_assets\orbat\CTS.paa";
     CTS_MissionDesc = getText (missionConfigFile >> "onLoadName");
     [CTS_MissionIntroImage, toUpper(CTS_MissionDesc)] spawn {
         _l = ["tLayer"] call BIS_fnc_rscLayer;
@@ -126,7 +126,7 @@ case "APEX": {
     _text = [[worldname], [(str(date select 2) + " de " + _month + " " + str(date select 0)), 1, 5], ["Equipo " + groupID(group player), 1, 1, 4]] spawn BIS_fnc_EXP_camp_SITREP;
     waitUntil {scriptDone _text};
     sleep 4;
-    _present = ["<t font='PuristaBold' size='1.25'>" + "SIMULACIÓN TIER 1<br/>" + "</t>" + "<t size='0.7'>" + "PRESENTA<br/>" + "</t>",0,0.4,4.5,-1] spawn bis_fnc_dynamicText;
+    _present = ["<img size= '4' shadow='false' image='mission\images\group-logo.paa'/><br/><br/><t size='.7' color='#FFFFFF'>PRESENTA</t>",0,0.4,4.5,-1] spawn bis_fnc_dynamicText;
     enableSentences true;
     switch (_sound) do{
       case 0: {player globalRadio "Start1"; ["HQ", "De acuerdo caballeros, solo tenemos una oportunidad. Adelante. Corto"] call BIS_fnc_showSubtitle;};

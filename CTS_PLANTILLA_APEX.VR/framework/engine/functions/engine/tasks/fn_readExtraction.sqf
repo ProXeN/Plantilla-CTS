@@ -24,44 +24,35 @@ RETURNS:
 
 if (!isServer) exitWith {};
 
-extraction_points_blu = [];
-extraction_points_op = [];
-extraction_points_ind = [];
-extraction_points_civ = [];
+private _sides = [WEST, EAST, RESISTANCE, CIVILIAN];
+private _sideStrs = ["blu", "op", "ind", "civ"];
+private _colors = ["ColorBLUFOR", "ColorOPFOR", "ColorIndependent", "ColorCivilian"];
+
+private _extractionPoints = [[], [], [], []]; // Blu, Op, Ind, Civ
 
 {
-_pos = missionNamespace getVariable [_x, objNull];
-extraction_points_blu pushBack _pos;
-} forEach mission_extraction_points_a;
+	private _index = _sides find (missionNamespace getVariable format ["side_%1_side", _x]);
+	(_extractionPoints select _index) append (missionNamespace getVariable format ["mission_extraction_points_%1", _x]);
+} forEach ["a", "b", "c"];
 
 {
-_pos = missionNamespace getVariable [_x, objNull];
-extraction_points_op pushBack _pos;
-} forEach mission_extraction_points_b;
+	private _extName = str _x splitString "_";
+	if (count _extName > 2 && {_extName select 1 == "extraction"}) then {
+		private _index = _sideStrs find (_extName select 0);
+		private _color = if (_index != -1) then {
+			_extractionPoints select _index pushBackUnique _x;
+			_colors select _index
+		} else {
+			"ColorBlack"
+		};
+		["global", getPos _x, "mil_end", _color, format ["Extraction #%1", _extName select [2, count _extName] joinString "_"], [1, 1], (getDir _x) + 180, 1] call BRM_fnc_newMarkerIcon;
+	};
+} forEach (allMissionObjects "");
 
 {
-_pos = missionNamespace getVariable [_x, objNull];
-extraction_points_ind pushBack _pos;
-} forEach mission_extraction_points_c;
-
-extraction_a = [];
-extraction_b = [];
-extraction_c = [];
-
-switch (side_a_side) do {
-    case WEST: { extraction_a pushBack mission_extraction_BLU; extraction_a pushBack extraction_points_blu };
-    case EAST: { extraction_a pushBack mission_extraction_OP; extraction_a pushBack extraction_points_op };
-    case RESISTANCE: { extraction_a pushBack mission_extraction_IND; extraction_a pushBack extraction_points_ind };
-};
-
-switch (side_b_side) do {
-    case WEST: { extraction_b pushBack mission_extraction_BLU; extraction_b pushBack extraction_points_blu };
-    case EAST: { extraction_b pushBack mission_extraction_OP; extraction_b pushBack extraction_points_op };
-    case RESISTANCE: { extraction_b pushBack mission_extraction_IND; extraction_b pushBack extraction_points_ind };
-};
-
-switch (side_c_side) do {
-    case WEST: { extraction_c pushBack mission_extraction_BLU; extraction_c pushBack extraction_points_blu };
-    case EAST: { extraction_c pushBack mission_extraction_OP; extraction_c pushBack extraction_points_op };
-    case RESISTANCE: { extraction_c pushBack mission_extraction_IND; extraction_c pushBack extraction_points_ind };
-};
+	private _index = _sides find (missionNamespace getVariable format ["side_%1_side", _x]);
+	(missionNamespace setVariable [format ["extraction_%1", _x], [
+		missionNamespace getVariable format ["mission_extraction_%1", _sideStrs select _index],
+		_extractionPoints select _index
+	]]);
+} forEach ["a", "b", "c"];

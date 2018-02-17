@@ -39,13 +39,3 @@ CTS_Saludo = {
 
 //  Todo lo que esté debajo de esta línea se ejecuta después del briefing.     |
 // =============================================================================
-
-//Ejemplo de conversaciones. Sentencias simples y conversaciones multirespuesta.
-// Variables comunes
-//IP_LiveFeed, controla si se usa el sistema de camara en vivo o se usa el avatar.
-//IP_Buddy setVariable ["IP_LiveFeed", true];
-//ambientlead setVariable ["IP_LiveFeed", true];
-// IP_Avatar, controla la imagen de avatar que se usa. Por defecto se usa la de "framework\plugins\conversation_system\img\defaultAvatar.jpg"
-//IP_Buddy setVariable ["IP_Avatar", "mission\images\buddyAvatar.jpg"];
-// IP_ConvSpecial, algun tipo de subtexto a la hora de describir al personaje.
-//IP_Buddy setVariable ["IP_ConvSpecial", "Best Buddy Ever"];

@@ -1,0 +1,247 @@
+body {	
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+	background-color: #ececec;
+}
+
+/* ****************
+	Landing page 
+**************** */
+#header {
+	background-color: #252525;
+	color: white;
+}
+
+@font-face {
+    font-family: "tSFont";
+    src: url(tS_EL.otf);
+}
+
+#header-title {
+	font-size: 24px;
+	padding-left: 40px;
+	font-family: "tSFont";
+}
+
+#header-title span {
+	background-color: #c52334;
+	padding: 0px 4px;
+	border-radius: 0px 8px 8px 8px;
+}
+
+#header-status {
+	font-size: 18px;
+	background-color: #5a5a5a;
+	padding: 6px 0px 3px 40px;	
+}
+
+#uploader {	
+	display: none;
+}
+
+.header-btn {
+	display: inline-block;
+	border: 2px solid #ececec;
+	color: #ececec;
+	padding: 4px 10px;
+	cursor: pointer;
+	background-color: none;
+}
+
+.header-btn:hover {	
+	background-color:  #ececec;
+	border: 2px solid #ececec;
+	color: #5a5a5a;
+}
+
+.header-btn span {
+	font-size: 12px;
+}
+
+.header-btn-selected {
+	background-color:  #ececec;
+	border: 2px solid #ececec;
+	color: #5a5a5a;
+}
+
+#report-selector {
+	position: absolute;
+	top: -1000px;
+}
+
+#report-selector ul li {
+	margin: 6px 0px;
+	padding: 6px 16px;
+	font-size: 20px;	
+	color: #252525;
+	border: 1px solid #252525;
+	background-color: none;
+	
+	cursor: pointer;
+	list-style-type: none;
+}
+
+#report-selector ul li:hover {
+	background-color:  #C52334;
+	border: 1px solid white;
+	color: white;
+}
+
+
+/* **********************
+	Progress Bar
+************************/
+#progress-viewer {
+	background-color: #5a5a5a;
+	position: fixed;
+	width: 300 px;
+	top: -2000px;
+	left: 13%;
+	-webkit-box-shadow: 14px 14px 56px -8px rgba(0,0,0,0.75);
+	-moz-box-shadow: 14px 14px 56px -8px rgba(0,0,0,0.75);
+	box-shadow: 14px 14px 56px -8px rgba(0,0,0,0.75);
+}
+
+#progress-header {
+	font-size: 16px;
+	padding: 4px 20px;
+	color: white;
+	border-bottom: 2px solid #c52334;
+}
+
+#progress-status {
+	padding: 4px 30px;
+	background-color: #CCCCCC;
+	font-size: 14px;
+	font-family: monospace;
+	/*overflow-y: scroll; */
+	/*height: 300px;*/
+	white-space:pre;
+}
+
+/* ****************
+	Form 
+**************** */
+#result-form {
+	position: absolute;
+	top: -1000px;
+}
+.dl-1 {
+	display: inline-block;
+	width: 150px;	
+	font-size: 15px;
+}
+
+.dl-2 {
+	display: inline-block;
+	width: 350px;
+}
+
+.dl-2 input {
+	width: 350px;
+	height: 20px;
+	padding: 3px 6px;	
+}
+
+#mission-time, h4 {	
+	display: inline-block;
+	padding: 1px 5px;
+	
+	border: 1px solid #6798D2;
+	background-color: #6798D2;
+	border-radius: 15px;
+	font-size: 14px;
+	color: white;
+}
+
+.dl-3 {
+	display: block;
+	width: 500px;
+
+}
+.dl-3 textarea {
+	width: 500px;
+	padding: 3px 6px;
+	font-family: sans-serif;	
+}
+
+#result-form ul li {
+	padding: 3px 0px;
+	list-style-type: none;
+}
+
+#player-list {
+	font-family: sans-serif;
+	font-size: 14px;
+}
+
+#output-btn-panel {
+	margin-left: 40px;
+}
+
+.output-btn {
+	display: inline-block;
+	border: 1px solid #252525;
+	color: #252525;
+	padding: 6px 16px;
+	cursor: pointer;
+	width: 500px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.output-btn:hover {	
+	background-color:  #C52334;
+	border: 1px solid white;
+	color: white;
+}
+
+#output-footer textarea {
+	display: block;
+	margin: 10px 40px;
+	position: absolute;	
+	width: 510px;
+}
+
+.player-side-icon {
+	display: inline-block;
+	color: white;
+	margin: 2px 1px;
+	border-radius: 6px;
+}
+
+/*
+	OUTPUT
+*/
+
+#output-config-line {
+	padding: 4px 0px 4px 20px;
+	font-size: 12px;
+}
+
+#output-config-uploader{
+	padding-top: 120px;
+}
+
+#configUploader {
+	display: none;
+}
+
+.config-file-btn {
+	display: inline-block;
+	border: 1px solid #252525;
+	color: #252525;
+	margin-left: 40px;
+	padding: 6px 16px;
+	cursor: pointer;
+	width: 140px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.config-file-btn:hover {
+	background-color:  #C52334;
+	border: 1px solid white;
+	color: white;
+}

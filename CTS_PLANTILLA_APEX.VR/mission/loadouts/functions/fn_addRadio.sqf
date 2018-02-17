@@ -10,7 +10,7 @@ switch (true) do {
             case WEST: {
                 switch(_kind) do {
                     case "SR": { _unit linkItem "tf_rf7800str" };
-                    case "LR": { _unit addItem "tf_anprc152" };
+                    case "LR": { _unit linkItem "tf_anprc152" };
                     case "BP": { removeBackpack _unit; _unit addBackPack "tf_rt1523g_big" };
                     case "BPR": { removeBackpack _unit; _unit addBackPack "tf_rt1523g" };
                 };

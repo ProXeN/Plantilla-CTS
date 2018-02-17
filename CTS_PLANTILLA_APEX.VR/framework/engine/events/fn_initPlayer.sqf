@@ -26,11 +26,9 @@ RETURNS:
 
 if (!hasInterface) exitWith {};
 finishMissionInit;
-waitUntil {(player == player)};
-waitUntil{!(isNull player)};
+waitUntil { player == player && !isNull player };
 
 _playerLog = format ["INITIALIZING PLAYER '%1' (%2)", name player, player];
-
 ["LOCAL", "F_LOG", _playerLog] call BRM_fnc_doLog;
 ["SERVER", "F_LOG", _playerLog] call BRM_fnc_doLog;
 
@@ -69,14 +67,7 @@ private["_faction","_role"];
 
 // Reads player's init line. ===================================================
 
-_initUnit = player getVariable ["unitInit", ["white", "*", "*", "*", "*"]];
-_aliasAUTO = ["*","AUTO","ANY"];
-_aliasNONE = ["-","NONE","VANILLA"];
-
-_groupColor = _initUnit select 0;
-_faction = _initUnit select 1;
-_role = _initUnit select 2;
-_groupName = _initUnit select 3;
+(player getVariable ["unitInit", ["MAIN", "*", "*", "*"]]) params ["_groupColor", "_faction", "_role", "_groupName"];
 
 // Adds player to relevant lists and registers its original side. ==============
 
@@ -90,11 +81,15 @@ switch (true) do {
 
 // Reads player faction and assigns the unit loadout. ==========================
 
-switch (true) do {
-    case (_faction == "side_a"): { _faction = side_a_faction };
-    case (_faction == "side_b"): { _faction = side_b_faction };
-    case (_faction == "side_c"): { _faction = side_c_faction };
+_faction = switch (_faction) do {
+    case "side_a": { side_a_faction };
+    case "side_b": { side_b_faction };
+    case "side_c": { side_c_faction };
+    default        { _faction };
 };
+
+private _aliasAUTO = ["*", "AUTO", "ANY"];
+private _aliasNONE = ["-", "NONE", "VANILLA"];
 
 if (toUpper(_faction) in _aliasAUTO) then {
     _faction = [(side player), "faction"] call BRM_fnc_getSideInfo;
@@ -107,6 +102,11 @@ if (toUpper(_role) in _aliasAUTO) then {
 if ((!(_faction in _aliasNONE)) && (!units_player_useVanillaGear)) then {
     [player, _faction, _role] call BRM_fnc_assignLoadout;
 };
+
+// Holster player's weapon. ====================================================
+
+[player] spawn BRM_fnc_weaponAway;
+
 // Assigns alias to other units and groups. ====================================
 
 if (player_is_jip) then {
@@ -130,14 +130,12 @@ player addEventHandler ["Killed", BRM_fnc_onPlayerKilled];
 
 // Changes the player's assigned color within its group. =======================
 
-[player, _role, toUpper(_groupColor)] spawn {
-    _player = _this select 0;
-    _role = _this select 1;
-    _color = _this select 2;
+[toUpper _groupColor] spawn {
+    params ["_color"];
+    private _nColor = if (_color == "WHITE") then { "MAIN" } else { _color };
 
     sleep 5;
-
-    [-1, { (_this select 0) assignTeam (_this select 1)}, [_player, _color]] call CBA_fnc_globalExecute;
+    player assignTeam _nColor;
 };
 
 // Finishes initialization sequence. ===========================================

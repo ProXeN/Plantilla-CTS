@@ -9,7 +9,6 @@ _t 	= mission_init_time / 100;
 _c	= 0;
 
 titletext ["", "BLACK FADED",10e10];
-[_u] call BRM_fnc_weaponAway;
 _u enableSimulation false;
 showMap false;
 

@@ -5,7 +5,7 @@
 //                                                                             |
 // ============================================================================
 
-#define GROUPLOGO "mission\images\group-logo.paa"
+#define GROUPLOGO "\CTS_assets\orbat\CTS.paa"
 
 class victory
 {

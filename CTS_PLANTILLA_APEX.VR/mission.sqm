@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1465.2367,17.470556,1258.5031};
-		dir[]={-0.34273332,-0.26609698,0.90109736};
-		up[]={-0.094636247,0.9638831,0.24880475};
-		aside[]={0.93478429,1.2583623e-006,0.35555324};
+		pos[]={1443.2485,30.710241,1250.0189};
+		dir[]={0.7247206,-0.50421458,0.46989465};
+		up[]={0.42310414,0.86351091,0.27433556};
+		aside[]={0.54410356,-7.0346869e-007,-0.83915746};
 	};
 };
 binarizationWanted=0;
@@ -28,11 +28,6 @@ addons[]=
 	"A3_Supplies_F_Heli_CargoNets",
 	"A3_Characters_F",
 	"A3_Soft_F_Gamma_Truck_01",
-	"ace_realisticnames",
-	"ace_rearm",
-	"ace_cargo",
-	"ace_refuel",
-	"ace_repair",
 	"A3_Soft_F_MRAP_01",
 	"A3_Air_F_Heli_Light_01",
 	"A3_Air_F_Beta_Heli_Transport_01",
@@ -40,19 +35,13 @@ addons[]=
 	"A3_Structures_F_Walls",
 	"A3_Roads_F",
 	"A3_Structures_F_Mil_Helipads",
-	"ace_gforces",
-	"ace_parachute",
-	"Desert",
-	"ace_explosives",
 	"A3_Ui_F",
 	"A3_Structures_F_Civ_Camping",
-	"acex_sitting",
 	"A3_Structures_F_Items_Electronics",
 	"A3_Structures_F_Civ_Garbage",
 	"A3_Structures_F_Items_Vessels",
 	"A3_Structures_F_EPA_Mil_Scrapyard",
 	"A3_Props_F_Exp_A_Military_Equipment",
-	"po_factions_me",
 	"cba_xeh",
 	"A3_Modules_F",
 	"A3_Characters_F_Exp",
@@ -66,7 +55,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=27;
+		items=18;
 		class Item0
 		{
 			className="A3_Supplies_F_Heli";
@@ -90,163 +79,103 @@ class AddonsMetaData
 		};
 		class Item3
 		{
-			className="ace_rearm";
-			name="ACE3 - Rearm";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item4
-		{
-			className="ace_cargo";
-			name="ACE3 - Cargo";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item5
-		{
-			className="ace_refuel";
-			name="ACE3 - Refuel";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item6
-		{
-			className="ace_repair";
-			name="ACE3 - Repair";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item7
-		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item4
 		{
 			className="A3_Air_F";
 			name="Arma 3 Alpha - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
+		class Item5
 		{
 			className="A3_Air_F_Beta";
 			name="Arma 3 Beta - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item6
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item7
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item8
 		{
 			className="A3_Roads_F";
 			name="Arma 3 - Roads";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item9
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
-		{
-			className="ace_parachute";
-			name="ACE3 - Parachute";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item15
-		{
-			className="Desert";
-			name="Desert";
-		};
-		class Item16
-		{
-			className="ace_explosives";
-			name="ACE3 - Explosives";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item17
+		class Item10
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item18
-		{
-			className="acex_sitting";
-			name="ACEX - Sitting";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item19
+		class Item11
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item20
+		class Item12
 		{
 			className="A3_Props_F_Exp_A";
 			name="Arma 3 Nexus Update - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item21
-		{
-			className="po_factions_me";
-			name="po_factions_me";
-			author="Leight, Keeway";
-		};
-		class Item22
+		class Item13
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item23
+		class Item14
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item15
 		{
 			className="A3_Data_F_Exp_A";
 			name="Arma 3 Nexus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item16
 		{
 			className="A3_Air_F_EPC";
 			name="Arma 3 Win Episode - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item26
+		class Item17
 		{
 			className="A3_Air_F_Jets";
 			name="Arma 3 Jets - Aircraft";
