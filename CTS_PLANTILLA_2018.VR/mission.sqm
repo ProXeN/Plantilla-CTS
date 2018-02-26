@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=44;
+		nextID=48;
 	};
 	class Camera
 	{
-		pos[]={1677.7596,47.134777,1362.795};
-		dir[]={-0.31875238,-0.67241812,0.66819161};
-		up[]={-0.28952277,0.74013853,0.60692227};
-		aside[]={0.902659,-4.1443855e-008,0.43060032};
+		pos[]={3014.2349,85.569801,804.63489};
+		dir[]={0.49998862,-0.85673559,-0.12750043};
+		up[]={0.83013743,0.51579124,-0.21169305};
+		aside[]={-0.24712956,9.3650306e-007,-0.9690966};
 	};
 };
 binarizationWanted=0;
@@ -32,12 +32,6 @@ addons[]=
 	"A3_Supplies_F_Heli_CargoNets",
 	"A3_Characters_F",
 	"A3_Soft_F_Gamma_Truck_01",
-	"Blastcore_VEP",
-	"ace_realisticnames",
-	"ace_rearm",
-	"ace_cargo",
-	"ace_refuel",
-	"ace_repair",
 	"A3_Soft_F_MRAP_01",
 	"A3_Air_F_Heli_Light_01",
 	"A3_Air_F_Beta_Heli_Transport_01",
@@ -45,20 +39,15 @@ addons[]=
 	"A3_Structures_F_Walls",
 	"A3_Roads_F",
 	"A3_Structures_F_Mil_Helipads",
-	"ace_gforces",
-	"ace_parachute",
 	"Desert",
-	"ace_explosives",
 	"A3_Ui_F",
 	"A3_Structures_F_Civ_Camping",
-	"acex_sitting",
 	"A3_Structures_F_Items_Electronics",
 	"A3_Structures_F_Civ_Garbage",
 	"A3_Structures_F_Items_Vessels",
 	"A3_Structures_F_EPA_Mil_Scrapyard",
 	"A3_Props_F_Exp_A_Military_Equipment",
 	"cba_xeh",
-	"po_factions_me",
 	"A3_Characters_F_Exp",
 	"A3_Modules_F_StrategicMap",
 	"A3_Data_F_Exp_A_Virtual",
@@ -73,7 +62,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=31;
+		items=22;
 		class Item0
 		{
 			className="A3_Supplies_F_Heli";
@@ -97,187 +86,127 @@ class AddonsMetaData
 		};
 		class Item3
 		{
-			className="Blastcore_VEP";
-			name="Blastcore_VEP";
-		};
-		class Item4
-		{
-			className="ace_rearm";
-			name="ACE3 - Rearm";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item5
-		{
-			className="ace_cargo";
-			name="ACE3 - Cargo";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item6
-		{
-			className="ace_refuel";
-			name="ACE3 - Refuel";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item7
-		{
-			className="ace_repair";
-			name="ACE3 - Repair";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item8
-		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
+		class Item4
 		{
 			className="A3_Air_F";
 			name="Arma 3 Alpha - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item5
 		{
 			className="A3_Air_F_Beta";
 			name="Arma 3 Beta - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
+		class Item6
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item7
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item8
 		{
 			className="A3_Roads_F";
 			name="Arma 3 - Roads";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item9
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
-		{
-			className="ace_parachute";
-			name="ACE3 - Parachute";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item16
+		class Item10
 		{
 			className="Desert";
 			name="Desert";
 		};
-		class Item17
-		{
-			className="ace_explosives";
-			name="ACE3 - Explosives";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item18
+		class Item11
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item19
-		{
-			className="acex_sitting";
-			name="ACEX - Sitting";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item20
+		class Item12
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item21
+		class Item13
 		{
 			className="A3_Props_F_Exp_A";
 			name="Arma 3 Nexus Update - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item22
-		{
-			className="po_factions_me";
-			name="po_factions_me";
-			author="Leight, Keeway";
-		};
-		class Item23
+		class Item14
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item15
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item16
 		{
 			className="A3_Data_F_Exp_A";
 			name="Arma 3 Nexus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item26
+		class Item17
 		{
 			className="A3_Air_F_EPC";
 			name="Arma 3 Win Episode - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item27
+		class Item18
 		{
 			className="A3_Air_F_Jets";
 			name="Arma 3 Jets - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item28
+		class Item19
 		{
 			className="A3_Air_F_Exp";
 			name="Arma 3 Apex - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item29
+		class Item20
 		{
 			className="RHNET_Actionbuilder";
 			name="RHNET_Actionbuilder";
 		};
-		class Item30
+		class Item21
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
@@ -7212,7 +7141,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={3033.1211,5,757.685};
-			angle=3.1488175;
+			angle=3.1488173;
 			class Attributes
 			{
 				condition="call{true}";
