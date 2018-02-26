@@ -81,7 +81,6 @@ _countPAKCARGO = 10;
 // UNIFORMS ====================================================================
 
 _headsLIST = [
-    "TRYK_H_pakol2",
     "LOP_H_Turban",
     "LOP_H_Turban_mask",
     "LOP_H_Pakol",
@@ -91,9 +90,6 @@ _headsLIST = [
 ];
 
 _uniformsLIST = [
-    "TRYK_ZARATAKI",
-    "TRYK_ZARATAKI2",
-    "TRYK_ZARATAKI3",
     "LOP_U_TAK_Civ_Fatigue_01",
     "LOP_U_TAK_Civ_Fatigue_02",
     "LOP_U_TAK_Civ_Fatigue_04",

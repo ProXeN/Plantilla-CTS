@@ -25,8 +25,8 @@ intro_cutscene = "APEX";
 //                                                                             |
 // ============================================================================
 
-units_player_useVanillaGear = false;
-units_AI_useVanillaGear = false;
+units_player_useVanillaGear = true; //PONER EN FALSE SI QUEREIS USAR EQUIPACION AUTOMATICA PARA JUGADORES
+units_AI_useVanillaGear = true; //PONER EN FALSE SI QUEREIS EQUIPACION AUTOMATICA PARA IA ENEMIGA
 
 // ============================================================================
 //                        == PLAYERS INFORMATION ==                            |
@@ -42,12 +42,15 @@ units_AI_useVanillaGear = false;
 
 side_a_side = west;                 // Side the players belong to
 side_a_faction = "CTSMCT";            // Faction of the players.
-
+// MULTICAM "CTSMC"
+// MULTICAM ARIDO "CTSMCA"
+// MULTICAM TROPIC "CTSMCT"
 // =============================================================================
 
 side_b_side = east;                 // Side the enemies belong to
 side_b_faction = "CSAT";            // Enemy faction.
-
+// FACCIONES OPFOR A ELEGIR
+// CSAT, OPFIA, AAF, RUSSIA, ISIS, SYNDIKAT, VDV, CHEDAKI
 // =============================================================================
 
 side_c_side = resistance;           // Side of third faction.

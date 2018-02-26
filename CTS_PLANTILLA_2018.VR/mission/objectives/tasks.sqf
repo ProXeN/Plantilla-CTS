@@ -8,7 +8,7 @@
 //                                                                             |
 // ============================================================================
 
-if (!isServer) exitWith {};
+/* if (!isServer) exitWith {};
 [{scriptDone(mission_settings)}, {
 
 [
@@ -20,4 +20,4 @@ if (!isServer) exitWith {};
 ] call FHQ_fnc_ttAddTasks;
 
 true
-}, []] call CBA_fnc_waitUntilAndExecute;
+}, []] call CBA_fnc_waitUntilAndExecute; */

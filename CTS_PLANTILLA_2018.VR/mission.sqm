@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1057;
+	toggles=33;
 	class ItemIDProvider
 	{
 		nextID=812;
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=48;
+		nextID=56;
 	};
 	class Camera
 	{
-		pos[]={3014.2349,85.569801,804.63489};
-		dir[]={0.49998862,-0.85673559,-0.12750043};
-		up[]={0.83013743,0.51579124,-0.21169305};
-		aside[]={-0.24712956,9.3650306e-007,-0.9690966};
+		pos[]={3016.6748,55.910446,797.25989};
+		dir[]={0.65230298,-0.7579878,-0.012132187};
+		up[]={0.75786287,0.65224099,-0.014095142};
+		aside[]={-0.018600253,-3.6405254e-008,-0.99991781};
 	};
 };
 binarizationWanted=0;
@@ -7140,14 +7140,14 @@ class Mission
 		class Item143
 		{
 			dataType="Trigger";
-			position[]={3033.1211,5,757.685};
-			angle=3.1488173;
+			position[]={3032.3918,5,757.22711};
+			angle=3.1488171;
 			class Attributes
 			{
 				condition="call{true}";
 				onActivation="call{_nul = [thisTrigger, ""(side _x == east)"", ""[_x, 'side_b'] call BRM_fnc_initAI""] spawn BRM_fnc_callCodeArea}";
-				sizeA=18.417999;
-				sizeB=11.413;
+				sizeA=21.697025;
+				sizeB=14.51722;
 				interuptable=1;
 				isRectangle=1;
 			};
