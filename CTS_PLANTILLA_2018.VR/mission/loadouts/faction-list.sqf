@@ -1,7 +1,15 @@
 switch (toUpper(_faction)) do {
 
-    case "CTS": {
-        #include "factions\CTS.sqf"
+    case "CTSMC": {
+        #include "factions\CTSMC.sqf"
+    };
+
+    case "CTSMCA": {
+        #include "factions\CTSMCA.sqf"
+    };
+
+    case "CTSMCT": {
+        #include "factions\CTSMCT.sqf"
     };
 
     case "RACS": {

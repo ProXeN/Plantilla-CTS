@@ -19,5 +19,5 @@ USAGE:
 
 //#include "dac_plugin\main.cpp"          //Config DAC
 //#include "t8\main.cpp"          //Config T8
-#include "tfar_plugin\main.cpp"          //Config T8
-#include "dzn_brv\main.cpp"          //AAR Viewer
+#include "tfar_plugin\main.cpp"          //Config TFAR
+//#include "dzn_brv\main.cpp"          //AAR Viewer

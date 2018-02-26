@@ -41,7 +41,7 @@ units_AI_useVanillaGear = false;
 // ============================================================================
 
 side_a_side = west;                 // Side the players belong to
-side_a_faction = "CTS";            // Faction of the players.
+side_a_faction = "CTSMCT";            // Faction of the players.
 
 // =============================================================================
 

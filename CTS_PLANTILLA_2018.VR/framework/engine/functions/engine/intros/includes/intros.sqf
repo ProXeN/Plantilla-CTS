@@ -76,7 +76,7 @@ case "QUOTE": {
 	enableEnvironment false;
 	0 fadesound 0.2;
 	cutText ["", "BLACK FADED", 999];
-	playmusic "musica";
+	playmusic "CTS";
 	// time, [widht, height]
 	_handle = [17] spawn BRM_Intros_fnc_fadeQuote;
 	waitUntil {scriptDone _handle};
@@ -121,7 +121,7 @@ case "APEX": {
     //sleep 2;
     //_timeline = ["Mision_1"] spawn BRM_Intros_fnc_Timeline;
     //waitUntil {scriptDone _timeline};
-    playmusic "intro";
+    playmusic "CTS";
     sleep 1.2;
     _text = [[worldname], [(str(date select 2) + " de " + _month + " " + str(date select 0)), 1, 5], ["Equipo " + groupID(group player), 1, 1, 4]] spawn BIS_fnc_EXP_camp_SITREP;
     waitUntil {scriptDone _text};
