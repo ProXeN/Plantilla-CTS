@@ -1,15 +1,15 @@
-params ["_npc"];
+params ["_item"];
 //Interacción Contacto
 [
-_npc,              /* 0: Target */
-"Hablar", 		      /* 1: Title */
-"\CTS_assets\actions\talk.paa",     /* 2: idleIcon */
-"\CTS_assets\actions\talk.paa",     /* 3: progressIcon */
+_item,              /* 0: Target */
+"Recoger", 		      /* 1: Title */
+"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",     /* 2: idleIcon */
+"\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_search_ca.paa",     /* 3: progressIcon */
 "_this distance _target < 3",  /* 4: CondShow */
 "_caller distance _target < 3",/* 5: codeProgress */
 {},                       /* 6: codeStart */
 {},                       /* 7: codeTick */
-{[(_this select 0),(_this select 2)] remoteExec ["bis_fnc_holdActionRemove",[0,-2] select isDedicated,true]; remoteExec ["CTS_Conversacion",[0,-2] select isDedicated]},    /* 8: codeCompleted */
+{[(_this select 0),(_this select 2)] remoteExec ["bis_fnc_holdActionRemove",[0,-2] select isDedicated,true]; deletevehicle (_this select 0)},    /* 8: codeCompleted */
 {},                        /* 9: codeInterrupted */
 [],                        /* 10: Arguments */
 1,                        /* 11: Duration */

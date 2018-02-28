@@ -94,7 +94,7 @@ _headsLIST = [
     "CTS_Mich2000_2_Multicam",
     "CTS_Mich2000_2_OGA",
     "CTS_OPS_Multicam",
-    "CTS_OPS_OGA",
+    "CTS_oga_ops",
     "CTS_OPS_2_Multicam",
     "CTS_oga_OPS_2",
     "CTS_AirFrame"

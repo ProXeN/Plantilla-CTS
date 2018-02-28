@@ -121,7 +121,7 @@ case "APEX": {
     //sleep 2;
     //_timeline = ["Mision_1"] spawn BRM_Intros_fnc_Timeline;
     //waitUntil {scriptDone _timeline};
-    playmusic "CTS";
+    playmusic "CTS_Intro";
     sleep 1.2;
     _text = [[worldname], [(str(date select 2) + " de " + _month + " " + str(date select 0)), 1, 5], ["Equipo " + groupID(group player), 1, 1, 4]] spawn BIS_fnc_EXP_camp_SITREP;
     waitUntil {scriptDone _text};
@@ -261,4 +261,41 @@ case "CAMERA": {
   "dynamicBlur" ppEffectCommit 0;
   "dynamicBlur" ppEffectAdjust [0.0];
   "dynamicBlur" ppEffectCommit 2;
+};
+
+case "DOOM": {
+    player enableSimulation false;
+    _missionname = toUpper getText (missionConfigFile >> "onLoadName");
+    _sound = [0,1,2] call BIS_fnc_selectRandom;
+    _month = ["Unknowinus", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+    select (date select 1);
+    ["Intro", false] call BRM_Intros_fnc_blackOut;
+    // TIMELINE Y VIDEO PARA CAMPAÑAS
+    //_video = ["\CTS_assets\videos\quote_1.ogv"] call BRM_Intros_fnc_video;
+    //waitUntil {scriptDone _video};
+    //sleep 2;
+    //_timeline = ["Mision_1"] spawn BRM_Intros_fnc_Timeline;
+    //waitUntil {scriptDone _timeline};
+    playmusic "Intro";
+    sleep 4;
+    _text = [[worldname], [(str(date select 2) + " de " + _month + " " + str(date select 0)), 1, 5], ["Equipo " + groupID(group player), 2, 2, 4]] spawn BIS_fnc_EXP_camp_SITREP;
+    waitUntil {scriptDone _text};
+    sleep 7.8;
+    _present = ["<img size= '4' shadow='false' image='mission\images\group-logo.paa'/>",0,0.4,4,0] spawn bis_fnc_dynamicText;
+    waitUntil {scriptDone _present};
+    sleep 1.2;
+    _present = ["<t size='1' color='#FFFFFF'>PRESENTA</t>",0,0.5,4,0] spawn bis_fnc_dynamicText;
+    waitUntil {scriptDone _present};
+    sleep 4.1;
+    _present = ["<t size='1' color='#FFFFFF'>UNA MISIÓN POR " + toUpper(mission_author_name) + "</t>",0,0.5,4,0] spawn bis_fnc_dynamicText;
+    waitUntil {scriptDone _present};
+    player enableSimulation true;
+    sleep 4.2;
+    ["<t size='1.5' font='PuristaBold' color='#FFFFFF'>" + _missionName + "</t>",0,0.4,4,0] spawn BIS_fnc_dynamicText;
+    ["Intro", true] call BRM_Intros_fnc_blackIn;
+    "dynamicBlur" ppEffectEnable true;
+    "dynamicBlur" ppEffectAdjust [1.5];
+    "dynamicBlur" ppEffectCommit 0;
+    "dynamicBlur" ppEffectAdjust [0.0];
+    "dynamicBlur" ppEffectCommit 2;
 };

@@ -38,6 +38,8 @@ class BRM {
     		class createInsertion{};
     		class createExtraction{};
         class RRR{};
+        class objectMarker{};
+        class lightPoint{};
     };
     class ending {
         file = "framework\engine\functions\engine\ending";

@@ -14,6 +14,7 @@ removeVest _captive;
 removeAllAssignedItems _captive;
 removeHeadgear _captive;
 
+waitUntil {time > 30};
 _captive switchMove _anim; // SwitchMove to random animation
 // Set unit as hurt if it's the Execution animation
 if (_anim == "Acts_ExecutionVictim_Loop") then {
@@ -50,7 +51,7 @@ _captive setBehaviour "Careless"; // Set Behaviour to Careless because, you know
 							(_this select 0) setBehaviour "SAFE";
 							[(_this select 0)] joinSilent player;
 							[(_this select 0),(_this select 2)] remoteExec ["bis_fnc_holdActionRemove", 0, true];
-							["taskRescue","succeeded"] remoteExec ["FHQ_fnc_ttSetTaskState", 2] 
+							["taskRescue","succeeded"] remoteExec ["FHQ_fnc_ttSetTaskState", 2]
 						},
 /* 9 code executed on interruption */       {
 						_intrMessage = selectRandom ["¡No me dejéis aquí!","¡Eh, no te vayas!","¡Me matarán si me dejas aquí!","Joder, joder, joder..."];

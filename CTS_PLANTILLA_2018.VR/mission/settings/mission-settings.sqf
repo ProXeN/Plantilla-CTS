@@ -2,15 +2,17 @@ mission_settings_loaded = false;
 
 // ============================================================================
 //                                                                             |
-//    This is where you edit the mission values for your mission, have fun!    |
+//    Aquí es donde configuráis los valores principales de la misión           |
 //                                                                             |
 // ============================================================================
 
 // ============================================================================
-//                       == CREDITS AND VERSION ==                             |
+//                         == CREDITOS E INTRO ==                              |
 //                                                                             |
-//      Before we get started, write down the author name and the mission      |
-//          version just so you can keep track of the credits easier!          |
+//      Aquí colocáis el nombre del autor de la misión, la versión             |
+//          de la misma, y el tipo de intro que queréis. Los tipos             |
+//                           disponibles son:                                  |
+//                  "TILES", "APEX", "CAMERA", "DOOM"                          |
 //                                                                             |
 // ============================================================================
 
@@ -21,57 +23,50 @@ intro_cutscene = "APEX";
 // ============================================================================
 //                          ==   LOADOUT MODE   ==                             |
 //                                                                             |
-//           Determines if players will get any loadouts at all.               |
+//           Aquí elegís si queréis que la plantilla aplique                   |
+//                  las equipaciones automáticamente o no.                     |
+//           Dejadlo en false si queréis que lo haga, o ponedlo                |
+//      en true si preferís editar las equipaciones manualmente desde el       |
+//                            arsenal del editor.                              |
 //                                                                             |
 // ============================================================================
 
-units_player_useVanillaGear = true; //PONER EN FALSE SI QUEREIS USAR EQUIPACION AUTOMATICA PARA JUGADORES
-units_AI_useVanillaGear = true; //PONER EN FALSE SI QUEREIS EQUIPACION AUTOMATICA PARA IA ENEMIGA
+units_player_useVanillaGear = false; //JUGADORES
+units_AI_useVanillaGear = false; //IA
 
 // ============================================================================
-//                        == PLAYERS INFORMATION ==                            |
+//                              == FACCIONES ==                                |
 //                                                                             |
-//            Edit this value with the side the players belong to.             |
-//                            Valid values are:                                |
-//                                                                             |
-//                         west, east, resistance                              |
-//                                                                             |
-//   Valid colors are: "blue","red","green","white","black" and "yellow".      |
+//      Aquí seleccionáis el bando y las facciones de los jugadores y la iA.   |
 //                                                                             |
 // ============================================================================
 
-side_a_side = west;                 // Side the players belong to
-side_a_faction = "CTSMCT";            // Faction of the players.
+side_a_side = west;                 // Bando de los jugadores.
+side_a_faction = "CTSMC";            // Facción de los jugadores. Las disponibles son:
 // MULTICAM "CTSMC"
 // MULTICAM ARIDO "CTSMCA"
 // MULTICAM TROPIC "CTSMCT"
 // =============================================================================
 
-side_b_side = east;                 // Side the enemies belong to
-side_b_faction = "CSAT";            // Enemy faction.
+side_b_side = east;                 // Bando de la IA.
+side_b_faction = "CSAT";            // Facción de la IA
 // FACCIONES OPFOR A ELEGIR
 // CSAT, OPFIA, AAF, RUSSIA, ISIS, SYNDIKAT, VDV, CHEDAKI
 // =============================================================================
 
-side_c_side = resistance;           // Side of third faction.
-side_c_faction = "AAF";             // Third side's faction.
-
-// =============================================================================
-
-DAC_Res_Side = 1;                    // Side the independent are friendly to:
-                                     // 0: EAST / 1: WEST / 2: NOBODY
-                                     // (MUST BE THE SAME AS THE EDITOR!)
+side_c_side = resistance;           // Bando de la resistencia
+side_c_faction = "AAF";             // Facción de la resistencia
 
 // ============================================================================
-//                           == ALLOW JIP ==                                   |
+//                            == PERMITIR JIP ==                               |
 //                                                                             |
-//      If this value is set to false, JIPs will be removed upon joining.      |
+//                   Elegid si queréis que haya JIP o no                       |
 //                                                                             |
 // ============================================================================
 
 mission_allow_jip = true;
 
-// Assigns the properties to the sides. ========================================
+// Asigna propiedades a los bandos =============================================
 
 [] call BRM_fnc_assignSideProperties;
 
