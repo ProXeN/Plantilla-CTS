@@ -6,45 +6,25 @@ item1[] = {"BaseWest",2,250,84.667511,-334.998474,174.667511,-284.998474,0.00000
 item2[] = {"BaseWestGuer",2,250,188.995789,-336.011414,278.995789,-286.011414,0.000000,"BaseWestGuer"};
 item3[] = {"BaseGuer",2,250,299.401367,-336.011353,389.401367,-286.011353,0.000000,"BaseGuer"};
 item4[] = {"BaseEast",2,250,412.845703,-338.037170,502.845703,-288.037140,0.000000,"BaseEast"};
-item5[] = {"CTS_Aegis",2,250,293.323975,-215.476807,383.323975,-165.476807,0.000000,"CTS_Aegis"};
-item6[] = {"CTRG",2,250,605.295837,-53.413544,695.295837,-3.413544,0.000000,"CTRG"};
-item7[] = {"__2",4,218,605.295837,-151.664368,695.295837,-101.664368,0.000000,""};
-item8[] = {"Angel",2,250,-47.008850,-48.349182,42.991165,1.650818,0.000000,"Angel"};
-item9[] = {"_",4,218,-47.008850,-145.587036,42.991150,-95.587036,0.000000,""};
-item10[] = {"Angel1",2,250,-162.478989,134.984985,-72.478973,184.984985,0.000000,"Angel1"};
-item11[] = {"Angel2",2,250,71.499969,135.997864,161.499969,185.997864,0.000000,"Angel2"};
-item12[] = {"__1",4,218,-162.478958,42.811523,-72.478958,92.811523,0.000000,""};
-item13[] = {"_",4,218,71.499939,43.824463,161.499939,93.824463,0.000000,""};
-item14[] = {"NATO",2,250,291.298157,-53.413544,381.298157,-3.413544,0.000000,"NATO"};
-item15[] = {"Echo",2,250,291.298218,130.933411,381.298218,180.933411,0.000000,"Echo"};
-item16[] = {"__1",4,218,291.298279,-131.406555,381.298279,-81.406555,0.000000,""};
-item17[] = {"_",4,218,291.298218,36.734070,381.298218,86.734070,0.000000,""};
-item18[] = {"Razor",2,250,603.269958,114.727051,693.269958,164.727051,0.000000,"Razor"};
-item19[] = {"Razor1",2,250,447.284119,266.661316,537.284119,316.661316,0.000000,"Razor1"};
-item20[] = {"Razor2",2,250,770.397888,265.648560,860.397888,315.648560,0.000000,"Razor2"};
-item21[] = {"_",4,218,603.270020,26.605103,693.270020,76.605103,0.000000,""};
-item22[] = {"__1",4,218,447.284119,165.371887,537.284119,215.371887,0.000000,""};
-item23[] = {"_",4,218,770.397888,173.474976,860.397888,223.474976,0.000000,""};
+item5[] = {"CTS",2,4346,250.000000,-200.000000,350.000000,-150.000000,0.000000,"CTS"};
+item6[] = {"Zero",2,250,250.000000,25.000000,350.000000,75.000000,0.000000,"Zero"};
+item7[] = {"_",4,218,250.000000,-75.000000,350.000000,-25.000000,0.000000,""};
+item8[] = {"Hornet",2,250,250.000000,225.000000,350.000000,275.000000,0.000000,"Hornet"};
+item9[] = {"__2",4,218,250.000000,125.000000,350.000000,175.000000,0.000000,""};
+item10[] = {"Raptor",2,250,75.000000,225.000000,175.000000,275.000000,0.000000,"Raptor"};
+item11[] = {"Arrow",2,250,400.000000,225.000000,500.000000,275.000000,0.000000,"Arrow"};
+item12[] = {"_",4,218,75.000000,125.000000,175.000000,175.000000,0.000000,""};
+item13[] = {"__1",4,218,400.000000,125.000000,500.000000,175.000000,0.000000,""};
 link0[] = {5,7};
-link1[] = {5,9};
-link2[] = {5,16};
-link3[] = {6,21};
+link1[] = {6,9};
+link2[] = {6,12};
+link3[] = {6,13};
 link4[] = {7,6};
-link5[] = {8,12};
-link6[] = {8,13};
-link7[] = {9,8};
-link8[] = {12,10};
-link9[] = {13,11};
-link10[] = {14,17};
-link11[] = {16,14};
-link12[] = {17,15};
-link13[] = {18,22};
-link14[] = {18,23};
-link15[] = {21,18};
-link16[] = {22,19};
-link17[] = {23,20};
-globals[] = {0.000000,0,0,0,0,640,480,1,29,6316128,1,-311.374573,941.577087,408.466339,-486.932800,1237,884,1};
-window[] = {2,-1,-1,-1,-1,818,26,1306,26,3,1255};
+link5[] = {9,8};
+link6[] = {12,10};
+link7[] = {13,11};
+globals[] = {0.000000,0,0,0,0,640,480,1,31,6316128,1,-172.610352,1080.341309,512.796692,-382.602417,1237,884,1};
+window[] = {2,-1,-1,-1,-1,844,52,1332,52,3,1255};
 *//*%FSM</HEAD>*/
 class cfgOrbat
 {
@@ -103,200 +83,99 @@ class cfgOrbat
                 };
         };
         /*%FSM</STATE>*/
-        /*%FSM<STATE "CTS_Aegis">*/
-        class CTS_Aegis/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
+        /*%FSM<STATE "CTS">*/
+        class CTS/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
         {
                 /*%FSM<STATEINIT>*/
-                text = $STR_A3_cfgORBAT.fsmBIS_B_Aegis0;
-                textShort = $STR_A3_cfgORBAT.fsmBIS_B_Aegis1;
-                texture = "\a3\missions_f_epa\data\img\orbat\B_Aegis_texture_ca.paa";
-                color[] = {0,0,0,1};
+                text = "European Union Combat and Tactics Service";
+                textShort = "EU-CTS";
+                texture = "\CTS_assets\orbat\CTS.paa";
                 insignia = "\CTS_assets\orbat\CTS.paa";
+                color[] = {0,0,0,1};
                 colorInsignia[] = {0,0,0,1};
-                commander = $STR_A3_CfgIdentities_MacKinnon;
-                commanderRank = "Colonel";
-                description = "Fuerza conjunta formada por la OTAN y CTRG-14";
+                description = "Unidad de operaciones especiales europeo";
                 /*%FSM</STATEINIT>*/
                 subordinates[] = {
                         /*%FSM<LINK "_">*/
-                        Angel,
-                        /*%FSM</LINK>*/
-                        /*%FSM<LINK "__1">*/
-                        NATO,
-                        /*%FSM</LINK>*/
-                        /*%FSM<LINK "__2">*/
-                        CTRG,
+                        Zero,
                         /*%FSM</LINK>*/
                 };
         };
         /*%FSM</STATE>*/
-        /*%FSM<STATE "CTRG">*/
-        class CTRG/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
+        /*%FSM<STATE "Zero">*/
+        class Zero/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
         {
                 /*%FSM<STATEINIT>*/
                 side = "West";
                 textureSize = 0.8;
-                text = "Counter Technology Research Group 14";
-                textShort = "CTRG-14";
-                insignia = "mission\images\CTRG_Logo.paa";
-                type = "Infantry";
-                size = "Division";
-                description = "Unidad de operaciones especiales desplegada en el Mediterraneo.";
-
+                text = "Zero";
+                textShort = "Zero";
+                insignia = "\CTS_assets\orbat\CTS.paa";
+                type = "HQ";
+                size = "Section";
+                description = "Centro de mando.";
+                commander = "Riddick";
+                commanderRank = "GENERAL";
                 /*%FSM</STATEINIT>*/
                 subordinates[] = {
                         /*%FSM<LINK "_">*/
-                        Razor,
-                        /*%FSM</LINK>*/
-                };
-        };
-        /*%FSM</STATE>*/
-        /*%FSM<STATE "Angel">*/
-        class Angel/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
-        {
-                /*%FSM<STATEINIT>*/
-                id = 5;
-                idType = 0;
-                side = "West";
-                size = "Division";
-                type = "AviationSupport";
-                text = "%1 %2 %3";
-                textShort = "%1 %2 %3";
-                commander = NATOMen;
-
-
-
-                /*%FSM</STATEINIT>*/
-                subordinates[] = {
-                        /*%FSM<LINK "_">*/
-                        Angel1,
+                        Raptor,
                         /*%FSM</LINK>*/
                         /*%FSM<LINK "__1">*/
-                        Angel2,
+                        Arrow,
+                        /*%FSM</LINK>*/
+                        /*%FSM<LINK "__2">*/
+                        Hornet,
                         /*%FSM</LINK>*/
                 };
         };
         /*%FSM</STATE>*/
-        /*%FSM<STATE "Angel1">*/
-        class Angel1/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
+        /*%FSM<STATE "Hornet">*/
+        class Hornet/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
         {
                 /*%FSM<STATEINIT>*/
                 side = "West";
-                type = "Helicopter";
-                text = "Angel 1";
-                textShort = "Angel 1";
-                commander = NATOMen;
-                commanderRank = "Captain";
-                description = "Encargado de eliminar el soporte aereo del CSAT.";
-                assets[] = {{B_Plane_CAS_01_F,1}};
-                /*%FSM</STATEINIT>*/
-                subordinates[] = {
-                };
-        };
-        /*%FSM</STATE>*/
-        /*%FSM<STATE "Angel2">*/
-        class Angel2/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
-        {
-                /*%FSM<STATEINIT>*/
-                side = "West";
-                type = "Helicopter";
-                text = "Angel 2";
-                textShort = "Angel 2";
-                commander = NATOMen;
-                commanderRank = "Captain";
-                description = "Transporte aereo para Echo.";
-                assets[] = {{B_Heli_Transport_01_F,2}};
-                /*%FSM</STATEINIT>*/
-                subordinates[] = {
-                };
-        };
-        /*%FSM</STATE>*/
-        /*%FSM<STATE "NATO">*/
-        class NATO/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
-        {
-                /*%FSM<STATEINIT>*/
-                id = 1;
-                idType = 0;
-                side = "West";
-                size = "Company";
-                type = "Infantry";
-                text = "%1 %2 %3";
-                textShort = "%1 %2 %3";
-                commander = NATOMen;
-
-                /*%FSM</STATEINIT>*/
-                subordinates[] = {
-                        /*%FSM<LINK "_">*/
-                        Echo,
-                        /*%FSM</LINK>*/
-                };
-        };
-        /*%FSM</STATE>*/
-        /*%FSM<STATE "Echo">*/
-        class Echo/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
-        {
-                /*%FSM<STATEINIT>*/
-                id = 5;
-                idType = 2;
-                side = "West";
-                size = "Squad";
-                type = "Infantry";
-                text = "%1 %2 %3";
-                textShort = "Echo";
-                commander = NATOMen;
-                description = "Interceptaran los refuerzos provenientes de Kavala.";
-
-                /*%FSM</STATEINIT>*/
-                subordinates[] = {
-                };
-        };
-        /*%FSM</STATE>*/
-        /*%FSM<STATE "Razor">*/
-        class Razor/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
-        {
-                /*%FSM<STATEINIT>*/
-                side = "West";
-                text = "Razor";
-                textShort = "Razor";
-                type = "Infantry";
-                size = "Squad";
-                description = "Equipo CTRG-14 Razor.";
-                /*%FSM</STATEINIT>*/
-                subordinates[] = {
-                        /*%FSM<LINK "_">*/
-                        Razor1,
-                        /*%FSM</LINK>*/
-                        /*%FSM<LINK "__1">*/
-                        Razor2,
-                        /*%FSM</LINK>*/
-                };
-        };
-        /*%FSM</STATE>*/
-        /*%FSM<STATE "Razor1">*/
-        class Razor1/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
-        {
-                /*%FSM<STATEINIT>*/
-                side = "West";
-                text = "Razor 1";
-                textShort = "Razor 1";
+                text = "Hornet";
+                textShort = "Hornet";
                 type = "Infantry";
                 size = "Fireteam";
-                description = "Razor FT 1";
+                description = "Hornet";
+                commander = "Ice-Man";
+                commanderRank = "SERGEANT";
                 /*%FSM</STATEINIT>*/
                 subordinates[] = {
                 };
         };
         /*%FSM</STATE>*/
-        /*%FSM<STATE "Razor2">*/
-        class Razor2/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
+        /*%FSM<STATE "Raptor">*/
+        class Raptor/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
         {
                 /*%FSM<STATEINIT>*/
                 side = "West";
-                text = "Razor 2";
-                textShort = "Razor 2";
+                text = "Raptor";
+                textShort = "Raptor";
                 type = "Infantry";
                 size = "Fireteam";
-                description = "Razor FT 2";
+                description = "Raptor";
+                commander = "Proxen";
+                commanderRank = "SERGEANT";
+                /*%FSM</STATEINIT>*/
+                subordinates[] = {
+                };
+        };
+        /*%FSM</STATE>*/
+        /*%FSM<STATE "Arrow">*/
+        class Arrow/*%FSM<STATEPRECONDITION>*//*%FSM</STATEPRECONDITION>*/
+        {
+                /*%FSM<STATEINIT>*/
+                side = "West";
+                text = "Arrow";
+                textShort = "Arrow";
+                type = "Infantry";
+                size = "Fireteam";
+                description = "Arrow";
+                commander = "Proxen";
+                commanderRank = "SERGEANT";
                 /*%FSM</STATEINIT>*/
                 subordinates[] = {
                 };

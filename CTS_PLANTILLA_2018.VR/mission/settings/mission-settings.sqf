@@ -42,16 +42,18 @@ units_AI_useVanillaGear = false; //IA
 // ============================================================================
 
 side_a_side = west;                 // Bando de los jugadores.
-side_a_faction = "CTSMC";            // Facción de los jugadores. Las disponibles son:
+side_a_faction = "CTSMC";           // Facción de los jugadores. Las disponibles son:
+silenciadores = false;              // Activa o desactiva silenciadores
+nocturno = true;                    // Activa o desactiva equipamiento nocturno
 // MULTICAM "CTSMC"
 // MULTICAM ARIDO "CTSMCA"
 // MULTICAM TROPIC "CTSMCT"
 // =============================================================================
 
 side_b_side = east;                 // Bando de la IA.
-side_b_faction = "CSAT";            // Facción de la IA
+side_b_faction = "AAF2017";            // Facción de la IA
 // FACCIONES OPFOR A ELEGIR
-// CSAT, OPFIA, AAF, RUSSIA, ISIS, SYNDIKAT, VDV, CHEDAKI
+// CSAT, AAF, RUSSIA, ISIS, SYNDIKAT, VDV, CHEDAKI, AAF2017, GUERRILLA, PLA
 // =============================================================================
 
 side_c_side = resistance;           // Bando de la resistencia
@@ -65,6 +67,21 @@ side_c_faction = "AAF";             // Facción de la resistencia
 // ============================================================================
 
 mission_allow_jip = true;
+
+// ============================================================================
+//                              == ENDINGS ==                                  |
+//                                                                             |
+//        These are the endings that are called when conditions are met.       |
+//                                                                             |
+//         Some can be ignored if you aren't using the related plugin.         |
+//                                                                             |
+// ============================================================================
+
+endings_victory = "victory";                    // (COOP) Objectives completed.
+endings_defeat = "defeat";                      // (COOP) Critical objective failed.
+
+endings_civilians_killed = "defeat";            // (COOP) Max number of civies killed.
+endings_time_over = "defeat";                   // (COOP) Time limit reached.
 
 // Asigna propiedades a los bandos =============================================
 

@@ -14,7 +14,7 @@ PARAMETERS:
     0 - Ending event that should be called (STRING)
 
 USAGE:
-    ["victory"] call BRM_fnc_callEnding
+    ["victory"] spawn BRM_fnc_callEnding
 
 RETURNS:
     Nothing.
@@ -23,15 +23,17 @@ RETURNS:
 */
 
 // Ends the mission.
-if (!isRemoteExecuted && isMultiplayer || count _this == 1) then {
+
+if (!isRemoteExecuted && isMultiplayer) then {
 	if !(isServer && mission_running) exitWith {};
 
 	mission_running = false; publicVariable "mission_running";
 
 	params ["_ending"];
 
-	// Server reads all mission-related ending cases.
-	_this call compile preprocessFile "mission\settings\endings.sqf";
+	[_ending] remoteExec ["BRM_fnc_callEnding", 0];
+} else {
+	params ["_ending"];
 
 	if (hasInterface) then {
 		player allowDamage false;
@@ -39,5 +41,5 @@ if (!isRemoteExecuted && isMultiplayer || count _this == 1) then {
 
 	if (isServer) then { sleep 3 };
 
-	[_ending, _isWinner, true] spawn BIS_fnc_endMission;
+	[_ending] spawn BIS_fnc_endMission;
 };

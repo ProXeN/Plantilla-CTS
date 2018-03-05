@@ -31,15 +31,18 @@ switch (true) do {
 
     case (_isOfficer): {
         [_unit, _officerHEAD, _officerUNIFORM, _officerVEST, "tfw_ilbe_dd_coy"] call BRM_fnc_useUniform;
-        [_unit,[[_wsmoke,2],[_rsmoke,2],[_bsmoke,2]]] call BRM_fnc_addtoVest;
+        [_unit,[[_wsmoke,2],[_rsmoke,2],[_bsmoke,2]]] call BRM_fnc_addAmmo;
         [_unit, _commonRIFLE, _countRIFLE] call BRM_fnc_addWeaponKit;
+        [_unit, _commonPISTOL, _countPISTOL] call BRM_fnc_addWeaponKit;
+        [_unit, _commonTracer, _countTracerRIFLE] call BRM_fnc_addAmmo;
         [_unit, "primary", _commonCCO] call BRM_fnc_attachToWeapon;
         [_unit, "primary", _commonLASER] call BRM_fnc_attachToWeapon;
-        [_unit, _commonTracer, _countTracerRIFLE] call BRM_fnc_addAmmo;
-        [_unit, _commonPISTOL, _countPISTOL] call BRM_fnc_addWeaponKit;
         [_unit, "laserdesignator"] call BRM_fnc_addOptics;
         [_unit, [_UAVTerminal]] call BRM_fnc_linkItem;
         [_unit,"ItemcTab",1] call BRM_fnc_addItem;
+        if (silenciadores) then {
+            [_unit, "primary", _commonSUPPRESSOR] call BRM_fnc_attachToWeapon;
+        };
     };
 
     case (_isSquadLeader): {
@@ -48,26 +51,30 @@ switch (true) do {
         [_unit, _commonRIFLEGL, _countRIFLE] call BRM_fnc_addWeaponKit;
         [_unit, _commonTracer, _countTracerRIFLE] call BRM_fnc_addAmmo;
         [_unit,[[_40mmSwhite,6],[_40mmSred,6]]] call BRM_fnc_addtoBackpack;
-        [_unit,[[_gchemlight,2],[_irGRENADEblufor,1],[_CableTie,1]]] call BRM_fnc_addtoUniform;
         [_unit, _commonPISTOL, _countPISTOL] call BRM_fnc_addWeaponKit;
         [_unit, "primary", _commonRCO] call BRM_fnc_attachToWeapon;
         [_unit, "primary", _commonLASER] call BRM_fnc_attachToWeapon;
         [_unit, "laserdesignator"] call BRM_fnc_addOptics;
         [_unit,"ItemcTab",1] call BRM_fnc_addItem;
+        if (silenciadores) then {
+            [_unit, "primary", _commonSUPPRESSOR] call BRM_fnc_attachToWeapon;
+        };
     };
 
     case (_isTeamLeader): {
         [_unit, _leaderHEAD, _commonUNIFORM, _ftlVEST, "tfw_ilbe_dd_coy"] call BRM_fnc_useUniform;
         [_unit,[[_bsmoke,2],[_commonRIFLEGL select GL, _count40mm]]] call BRM_fnc_addtoVest;
-        [_unit, _commonRIFLEGL, _countRIFLE] call BRM_fnc_addWeaponKit;
-        [_unit, _commonTracer, _countTracerRIFLE] call BRM_fnc_addAmmo;
         [_unit,[[_40mmSwhite,6],[_40mmSred,6]]] call BRM_fnc_addtoBackpack;
-        [_unit,[[_gchemlight,2],[_irGRENADEblufor,1],[_CableTie,1]]] call BRM_fnc_addtoUniform;
+        [_unit, _commonRIFLEGL, _countRIFLE] call BRM_fnc_addWeaponKit;
         [_unit, _commonPISTOL, _countPISTOL] call BRM_fnc_addWeaponKit;
+        [_unit, _commonTracer, _countTracerRIFLE] call BRM_fnc_addAmmo;
         [_unit, "primary", _commonRCO] call BRM_fnc_attachToWeapon;
         [_unit, "primary", _commonLASER] call BRM_fnc_attachToWeapon;
         [_unit, "laserdesignator"] call BRM_fnc_addOptics;
         [_unit,"ItemcTab",1] call BRM_fnc_addItem;
+        if (silenciadores) then {
+            [_unit, "primary", _commonSUPPRESSOR] call BRM_fnc_attachToWeapon;
+        };
     };
 
     case (_isReconLeader): {
@@ -95,11 +102,14 @@ switch (true) do {
 
     case (_isRifleman): {
         [_unit, _commonHEAD, _commonUNIFORM, _commonVEST, "empty"] call BRM_fnc_useUniform;
-        [_unit,[[_wsmoke,5],[_gsmoke,2],[_grenade,_countGRENADES],[_gchemlight,2],[_irGRENADEblufor,1],[_CableTie,1]]] call BRM_fnc_addtoVest;
+        [_unit,[[_wsmoke,4],[_gsmoke,2],[_grenade,_countGRENADES]]] call BRM_fnc_addtoVest;
         [_unit, _commonRIFLE, _countRIFLE] call BRM_fnc_addWeaponKit;
+        [_unit, _commonTracer, _countTracerRIFLE] call BRM_fnc_addAmmo;
         [_unit, "primary", _commonCCO] call BRM_fnc_attachToWeapon;
         [_unit, "primary", _commonLASER] call BRM_fnc_attachToWeapon;
-        [_unit, _commonTracer, _countTracerRIFLE] call BRM_fnc_addAmmo;
+        if (silenciadores) then {
+            [_unit, "primary", _commonSUPPRESSOR] call BRM_fnc_attachToWeapon;
+        };
     };
 
     case (_isDemo): {
@@ -108,6 +118,9 @@ switch (true) do {
         [_unit,[[_apMINE,2],[_apBoundingMINE,2]]] call BRM_fnc_addtoVest;
         [_unit,[[_C4,3],[_satchelCharge,1],[_deadManSwitch,1]]] call BRM_fnc_addtoBackpack;
         [_unit, _commonRIFLE, _countRIFLELOW] call BRM_fnc_addWeaponKit;
+        if (silenciadores) then {
+            [_unit, "primary", _commonSUPPRESSOR] call BRM_fnc_attachToWeapon;
+        };
     };
 
     case (_isRiflemanAT): {
@@ -120,24 +133,34 @@ switch (true) do {
         [_unit, _commonAT] call BRM_fnc_addWeapon;
         [_unit, [[_commonAT select RAMMO, _countAT] ]] call BRM_fnc_addtoBackpack;
         [_unit, _commonAT select GUN, 1, ["HE"]] call BRM_fnc_addAmmoAuto;
+        if (silenciadores) then {
+            [_unit, "primary", _commonSUPPRESSOR] call BRM_fnc_attachToWeapon;
+        };
     };
 
     case (_isMarksman): {
         [_unit, _commonHEAD, _marksmanUNIFORM, _marksmanVEST, _commonBACKPACK] call BRM_fnc_useUniform;
         [_unit,[[_wsmoke,2], [_gsmoke,2],[_kestrel,1],[_tragMX,1],[_rangeCard,1]]] call BRM_fnc_addtoVest;
-        [_unit,[[_grenade,_countGRENADES],[_gchemlight,2],[_irGRENADEblufor,1],[_CableTie,1]]] call BRM_fnc_addtoBackpack;
+        [_unit,[[_grenade,_countGRENADES]]] call BRM_fnc_addtoBackpack;
         [_unit, _commonMARKSMAN, _countMARKSMAN] call BRM_fnc_addWeaponKit;
+        [_unit, _commonPISTOL, _countPISTOL] call BRM_fnc_addWeaponKit;
         [_unit, "primary", _commonMAGNIFIED] call BRM_fnc_attachToWeapon;
         [_unit, "primary", _bipodblk] call BRM_fnc_attachToWeapon;
         [_unit, "rangefinder"] call BRM_fnc_addOptics;
+        if (silenciadores) then {
+            [_unit, "primary", _commonDMRSUPPRESSOR] call BRM_fnc_attachToWeapon;
+        };
     };
 
     case (_isAutorifleman): {
         [_unit, _commonHEAD, _mgUNIFORM, _mgVEST, _commonBACKPACK] call BRM_fnc_useUniform;
-        [_unit,[[_wsmoke,2],[_grenade,2],[_gchemlight,2],[_irGRENADEblufor,1],[_CableTie,1],[_spareBarrel,1]]] call BRM_fnc_addtoVest;
+        [_unit,[[_wsmoke,2],[_grenade,2],[_spareBarrel,1]]] call BRM_fnc_addtoVest;
         [_unit, _commonMG, _countMG] call BRM_fnc_addWeaponKit;
         [_unit, "primary", _commonCCO] call BRM_fnc_attachToWeapon;
         [_unit, "primary", _commonLASER] call BRM_fnc_attachToWeapon;
+        if (silenciadores) then {
+            [_unit, "primary", _commonMGSUPPRESSOR] call BRM_fnc_attachToWeapon;
+        };
     };
 
     case (_isAutoriflemanAsst): {
@@ -149,6 +172,9 @@ switch (true) do {
         [_unit, "primary", _commonLASER] call BRM_fnc_attachToWeapon;
         [_unit, (_commonMG select 1), _countMG] call BRM_fnc_addAmmo;
         [_unit, _commonTracer, _countTracerRIFLE] call BRM_fnc_addAmmo;
+        if (silenciadores) then {
+            [_unit, "primary", _commonSUPPRESSOR] call BRM_fnc_attachToWeapon;
+        };
     };
 
     //Unfinished
@@ -165,7 +191,9 @@ switch (true) do {
         [_unit, _suppliesMEDIC] call BRM_fnc_addtoBackpack;
         [_unit, _commonRIFLE, _countRIFLELOW] call BRM_fnc_addWeaponKit;
         [_unit, "primary", _commonCCO] call BRM_fnc_attachToWeapon;
-        _defaultInsignia = "Medico";
+        if (silenciadores) then {
+            [_unit, "primary", _commonSUPPRESSOR] call BRM_fnc_attachToWeapon;
+        };
     };
 
     case (_isHMG): {
@@ -350,11 +378,26 @@ switch (true) do {
 [_unit,_microDAGR,1] call BRM_fnc_addItem;
 [_unit,_flashlight,1] call BRM_fnc_addItem;
 [_unit,"ItemcTabHCam",1] call BRM_fnc_addItem;
+[_unit,_CableTie,1] call BRM_fnc_addItem;
 
-if (_isPilot) then {
-[_unit, ["ItemMap", "ItemCompass", "ItemWatch"]] call BRM_fnc_linkItem;
+if (nocturno) then {
+    [_unit,_IRStrobe,1] call BRM_fnc_addItem;
+    [_unit,_irGRENADEblufor,1] call BRM_fnc_addAmmo;
+    [_unit,_gchemlight,2] call BRM_fnc_addAmmo;
+    switch (true) do {
+        case (_isMarksman): {
+            [_unit, ["ItemMap", "ItemCompass", "ItemWatch", _NVG]] call BRM_fnc_linkItem;
+            [_unit,_Nightstalker,1] call BRM_fnc_addItem;
+        };
+        case (_isPilot): {
+            [_unit, ["ItemMap", "ItemCompass", "ItemWatch"]] call BRM_fnc_linkItem;
+        };
+        default {
+            [_unit, ["ItemMap", "ItemCompass", "ItemWatch", _NVG]] call BRM_fnc_linkItem;
+        };
+    };
 } else {
-[_unit, ["ItemMap", "ItemCompass", "ItemWatch", _NVG]] call BRM_fnc_linkItem;
+    [_unit, ["ItemMap", "ItemCompass", "ItemWatch"]] call BRM_fnc_linkItem;
 };
 
 [_unit, "LR"] call BRM_fnc_addRadio;

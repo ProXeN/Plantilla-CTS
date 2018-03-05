@@ -276,7 +276,7 @@ case "DOOM": {
     //sleep 2;
     //_timeline = ["Mision_1"] spawn BRM_Intros_fnc_Timeline;
     //waitUntil {scriptDone _timeline};
-    playmusic "Intro";
+    playmusic "CTS_Doom";
     sleep 4;
     _text = [[worldname], [(str(date select 2) + " de " + _month + " " + str(date select 0)), 1, 5], ["Equipo " + groupID(group player), 2, 2, 4]] spawn BIS_fnc_EXP_camp_SITREP;
     waitUntil {scriptDone _text};

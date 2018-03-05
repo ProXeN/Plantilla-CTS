@@ -20,10 +20,6 @@ switch (toUpper(_faction)) do {
         #include "factions\sla.sqf"
     };
 
-    case "MUJAHIDEEN": {
-        #include "factions\mujahideen.sqf"
-    };
-
     case "ISIS": {
         #include "factions\isis.sqf"
     };
@@ -48,10 +44,6 @@ switch (toUpper(_faction)) do {
         #include "factions\ionpmc.sqf"
     };
 
-    case "TKMILITIA": {
-        #include "factions\tkmilitia.sqf"
-    };
-
     case "ANA": {
         #include "factions\ana.sqf"
     };
@@ -72,24 +64,24 @@ switch (toUpper(_faction)) do {
         #include "factions\aaf.sqf"
     };
 
+    case "AAF2017": {
+        #include "factions\aaf2017.sqf"
+    };
+
+    case "PLA": {
+        #include "factions\pla.sqf"
+    };
+
     case "FIA": {
         #include "factions\fia.sqf"
     };
 
+    case "GUERRILLA": {
+        #include "factions\guerrilla.sqf"
+    };
+
     case "SYNDIKAT": {
         #include "factions\syndikat.sqf"
-    };
-
-    case "MOLATIAN": {
-        #include "factions\molatian.sqf"
-    };
-
-    case "UN": {
-        #include "factions\un.sqf"
-    };
-
-    case "TKARMY": {
-        #include "factions\tkarmy.sqf"
     };
 
     case "RUSSIA": {
@@ -98,10 +90,6 @@ switch (toUpper(_faction)) do {
 
     case "CDF": {
         #include "factions\cdf.sqf"
-    };
-
-    case "OFPFIA": {
-        #include "factions\ofpfia.sqf"
     };
 
     case "DEFAULT": {

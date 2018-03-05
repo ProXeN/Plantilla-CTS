@@ -25,11 +25,10 @@ _factionSkill = [[0.7,0.8],   [0.8,0.9],      [0.7,0.8],     [0.7,0.9],      [0.
 // WEAPONS =====================================================================
 
 // Set in mission with BRM_UNIFORMS_AAFMKCamo
-_MKCamo = true;
 
-_rr=_Mk20;_rg=_Mk20GL;_rc=_MK20C;
-if(!isNil"BRM_UNIFORMS_AAFMKCamo")then{_MKCAmo=BRM_UNIFORMS_AAFMKCamo};
-if (_MKCamo) then { _rr=_Mk20Camo;_rg=_Mk20GLCamo;_rc=_MK20CCamo; };
+_rr=_Mk20Camo;
+_rg=_Mk20GLCamo;
+_rc=_MK20CCamo; 
 
 _commonRIFLE = _rr;
 _commonRIFLEGL = _rg;

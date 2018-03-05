@@ -87,9 +87,9 @@ switch(_x) do {
     };
 
     case "radio": {
-        [_object, "SR", _factionSide, 50] call BRM_fnc_addRadioToCargo;
         [_object, "LR", _factionSide, 20] call BRM_fnc_addRadioToCargo;
-        [_object, "BP", _factionSide, 5] call BRM_fnc_addRadioToCargo;
+        [[_object,"backpack", ["tfw_ilbe_dd_coy" , 5]]] call BRM_fnc_addtoCargo;
+        [[_object,"backpack", ["tfw_ilbe_dd_gr" , 5]]] call BRM_fnc_addtoCargo;
     };
 
     case "parachutes": {

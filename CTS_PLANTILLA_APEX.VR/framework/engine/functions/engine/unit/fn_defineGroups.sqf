@@ -40,7 +40,7 @@ private _unitsToCheck = if (isMultiplayer) then { playableUnits } else { allUnit
 
 			missionNamespace setVariable [(_unitName select [0, 3]) joinString "_", group _x, true];
 
-			[_x, _groupName, _role] call BRM_FMK_fnc_setAlias;
+			[_x, _groupName, _role] call BRM_fnc_setAlias;
 		};
 	};
 } forEach _unitsToCheck;

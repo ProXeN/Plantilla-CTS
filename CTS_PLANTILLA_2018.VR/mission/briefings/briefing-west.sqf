@@ -11,13 +11,6 @@ mission_author_name = [mission_author_name] call BRM_fnc_verboseArray;
 
 // =============================================================================
 
-///// CREDITS
-//[] execVM "framework\credits.sqf";
-// player createDiaryRecord ["Diary",["Creditos", "
-// <font color='#E6E6E6' size='14'>CREDITOS</font><br/>
-// <font color='#9DA698'>Mision por Proxen para CTS<br/><br/>
-// Gracias a los creadores de BromA Framework y ADF Framework.</font>
-// "]];
 player createDiaryRecord ["Diary", ["Creditos","
 <font color='#E6E6E6' size='14'>CREDITOS</font><br/>
 <font color='#9DA698'>Misión versión <font color='#E6E6E6'>" + mission_version + "</font> hecha por <font color='#E6E6E6'>" + mission_author_name + "</font> para la CTS <font color='#E6E6E6'>http://www.CTSarma.es</font><br/><br/>
@@ -125,7 +118,7 @@ player createDiaryRecord ["Diary",["Sistema Médico",
 ///// SUPPORT & LOGISTICS
 player createDiaryRecord ["Diary",["Servicio y Apoyo", "
 <font color='#E6E6E6' size='14'>EQUIPACIÓN</font><br/>
-<font color='#9DA698'>Equipo estándar de la CTS.
+<font color='#9DA698'>Equipo estándar de CTS.
 
 <br/><br/><font color='#E6E6E6' size='14'>VEHICULOS</font><br/>
 Transporte:<br/>
@@ -141,7 +134,7 @@ El punto de inicio de la operación es en <font color='#FFA500'><marker name='mS
 player createDiaryRecord ["Diary",["Ejecución","
 <font color='#E6E6E6' size='14'>EJECUCIÓN</font><br/>
 <font color='#9DA698'>
-Definido por CM.<br/><br/>
+Definido por Zero.<br/><br/>
 </font>
 "]];
 

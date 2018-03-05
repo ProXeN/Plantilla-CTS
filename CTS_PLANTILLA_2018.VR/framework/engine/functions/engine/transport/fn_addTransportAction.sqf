@@ -7,7 +7,7 @@ _actionAdapter = {
 
 _actions = [
 	[
-		"Select Destination",
+		"Elegir LZ",
 		_actionAdapter,
 		nil,
 		-20, //priority
@@ -20,7 +20,7 @@ _actions = [
 		""
 	],
 	[
-		"Divert to different LZ",
+		"Desviar a otra LZ",
 		_actionAdapter,
 		nil,
 		-20, //priority

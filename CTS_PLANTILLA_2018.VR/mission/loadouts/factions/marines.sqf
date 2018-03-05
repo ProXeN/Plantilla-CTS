@@ -40,7 +40,7 @@ _commonRCO = "rhsusf_acc_ACOG_USMC";
 _commonCCO = "rhsusf_acc_eotech_552";
 _commonMAGNIFIED = "optic_LRPS";
 _commonSUPPRESSOR = "rhsusf_acc_rotex5_grey";
-_commonPISTOLSUPPRESSOR = "RH_m9qd";
+_commonPISTOLSUPPRESSOR = "";
 _NVG = "rhsusf_ANPVS_15";
 
 // AMMO COUNT ==================================================================
@@ -90,7 +90,6 @@ _headsLIST = [
 ];
 
 _goggleLIST = [
-    "TRYK_SPGEAR_Glasses",
     "empty"
 ];
 
@@ -111,10 +110,10 @@ _reconHEAD = "rhs_Booniehat_marpat"+_lp;
 
 _commonUNIFORM = "rhs_uniform_FROG01_"+_lp;
 _officerUNIFORM = _commonUNIFORM;
-_pilotUNIFORM = "TRYK_OVERALL_SAGE";
+_pilotUNIFORM = _commonUNIFORM;
 _sniperUNIFORM = "U_B_FullGhillie_lsh";
 _marksmanUNIFORM = _commonUNIFORM;
-_helicrewUNIFORM = "TRYK_OVERALL_SAGE";
+_helicrewUNIFORM = _commonUNIFORM;
 _crewUNIFORM = _commonUNIFORM;
 _mgUNIFORM = _commonUNIFORM;
 _medicUNIFORM = _commonUNIFORM;

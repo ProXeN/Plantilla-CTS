@@ -246,6 +246,7 @@ switch (_command) do {
                     case (_units in _aliasALL): { _units = 0 };
                 };
 
+                systemchat str([_name, _id, _status, _faction, _respawns, _units, _reinforce, _side, _skill, _area, _pos]);
                 [_name, _id, _status, _faction, _respawns, _units, _reinforce, _side, _skill, _area, _pos] call BRM_DAC_fnc_createDACCamp;
             };
         };

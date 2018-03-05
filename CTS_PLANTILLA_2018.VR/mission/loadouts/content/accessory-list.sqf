@@ -32,6 +32,7 @@ _SOS = "optic_SOS";
 _TWS = "optic_tws";
 _TWSmg = "optic_tws_mg";
 _AMS = "optic_AMS";
+_DMS = "optic_DMS";
 
 // Flashlights/Lasers
 
@@ -58,41 +59,6 @@ _DMSgHex = "optic_DMS_ghex_F";
 
 _sup58ghex =  "muzzle_snds_58_ghex_F";
 
-// =============================================================================
-
-// FHQ
-
-// Scopes
-
-_FHQACOG = "FHQ_optic_ACOG";
-_FHQACOGTAN = "FHQ_optic_ACOG_tan";
-_FHQAIMPOINT = "FHQ_optic_AIM";
-_FHQAIMPOINTTAN = "FHQ_optic_AIM_tan";
-_FHQTWS = "FHQ_optic_TWS3050";
-_FHQHWS = "FHQ_optic_HWS";
-_FHQHWSTAN = "FHQ_optic_HWS_tan";
-_FHQEOTECH = "FHQ_optic_HWS_G33";
-_FHQEOTECHTAN = "FHQ_optic_HWS_G33_tan";
-_FHQMICROCCO = "FHQ_optic_MicroCCO";
-_FHQMICROCCOTAN = "FHQ_optic_MicroCCO_tan";
-_FHQMICROCCOLOW = "FHQ_optic_MicroCCO_low";
-_FHQMICROCCOLOWTAN = "FHQ_optic_MicroCCO_low_tan";
-_FHQLEOPOLD = "FHQ_optic_LeupoldERT";
-_FHQLEOPOLDTAN = "FHQ_optic_LeupoldERT_tan";
-_FHQVCOG = "FHQ_optic_VCOG";
-_FHQVCOGTAN = "FHQ_optic_VCOG_tan";
-_FHQAC117 = "FHQ_optic_AC11704";
-_FHQAC117TAN = "FHQ_optic_AC11704_tan";
-_FHQAC121 = "FHQ_optic_AC12136";
-_FHQAC121TAN = "FHQ_optic_AC12136_tan";
-_FHQMARS = "FHQ_optic_MARS";
-_FHQMARSTAN = "FHQ_optic_MARS_tan";
-
-// Flashlights/Lasers
-
-_FHQANPE = "FHQ_acc_ANPEQ15";
-_FHQANPEBLK = "FHQ_acc_ANPEQ15_black";
-_FHQLLM = "FHQ_acc_LLM01L";
 
 // =============================================================================
 
@@ -101,6 +67,7 @@ _FHQLLM = "FHQ_acc_LLM01L";
 // Scopes
 _RHSACOG = "rhsusf_acc_ACOG3";
 _RHSCCO = "rhsusf_acc_compm4";
+_RHSEOTECH = "rhsusf_acc_eotech_552";
 
 // Suppressors
 _RHSsup556 = "rhsusf_acc_nt4_black";
@@ -129,6 +96,8 @@ switch (true) do {
         _NVGEN1 = "ACE_NVG_Gen1";
         _NVGEN2 = "ACE_NVG_Gen2";
         _NVGEN4 = "ACE_NVG_Gen4";
+        _NVGEN4WIDE = "GEN4_A3_GPNVG18_F";
+        _NVGEN4WIDEBLK = "GEN4_A3_GPNVG18_BLK_F";
         _NVWIDE = "ACE_NVG_Wide";
         _LRPS = "ACE_optic_LRPS_2D";
         _SOS = "ACE_optic_SOS_2D";
@@ -138,6 +107,8 @@ switch (true) do {
         _NVGEN2 = "NVGoggles";
         _NVGEN4 = "NVGoggles";
         _NVWIDE = "NVGoggles";
+        _NVGEN4WIDE = "NVGoggles";
+        _NVGEN4WIDEBLK = "NVGoggles";
     };
 };
 

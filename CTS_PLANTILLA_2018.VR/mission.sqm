@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=46;
+	toggles=34;
 	class ItemIDProvider
 	{
-		nextID=1075;
+		nextID=1217;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=92;
+		nextID=108;
 	};
 	class Camera
 	{
-		pos[]={1452.2047,14.55484,1306.0063};
-		dir[]={0.2026176,-0.57558411,-0.79240221};
-		up[]={0.14262712,0.81742609,-0.55781764};
-		aside[]={-0.96876252,2.4357432e-006,-0.24770609};
+		pos[]={1606.8604,240.97714,1001.9581};
+		dir[]={0.063830227,-0.52799851,0.84693885};
+		up[]={0.039682932,0.84920841,0.52654278};
+		aside[]={0.99723876,-3.9394035e-007,-0.075157553};
 	};
 };
 binarizationWanted=0;
@@ -33,7 +33,9 @@ addons[]=
 	"A3_Characters_F",
 	"A3_Soft_F_Gamma_Truck_01",
 	"A3_Soft_F_MRAP_01",
+	"Kimi_UI_Optional",
 	"A3_Air_F_Heli_Light_01",
+	"Kimi_HMDs_Helos",
 	"A3_Air_F_Beta_Heli_Transport_01",
 	"A3_Signs_F",
 	"A3_Structures_F_Walls",
@@ -51,8 +53,11 @@ addons[]=
 	"A3_Characters_F_Exp",
 	"A3_Modules_F_StrategicMap",
 	"A3_Data_F_Exp_A_Virtual",
+	"Kimi_HMDs_Wipeout",
 	"A3_Air_F_EPC_Plane_CAS_01",
+	"Kimi_102_Weapons_Wipeout",
 	"A3_Air_F_Beta_Heli_Attack_01",
+	"Kimi_Weapons_Helos",
 	"A3_Air_F_Jets_Plane_Fighter_01",
 	"A3_Air_F_Exp_Heli_Transport_01",
 	"RHNET_Actionbuilder",
@@ -78,13 +83,17 @@ addons[]=
 	"A3_Weapons_F_Pistols_P07",
 	"A3_Weapons_F_Items",
 	"A3_Structures_F_Kart_Civ_SportsGrounds",
-	"CUP_CAMisc"
+	"CUP_CAMisc",
+	"globemaster_c17",
+	"A3_Structures_F_Heli_Furniture",
+	"A3_Structures_F_Heli_Items_Electronics",
+	"A3_Props_F_Orange_Items_Electronics"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=36;
+		items=43;
 		class Item0
 		{
 			className="A3_Supplies_F_Heli";
@@ -115,215 +124,252 @@ class AddonsMetaData
 		};
 		class Item4
 		{
+			className="Kimi_UI_Optional";
+			name="Kimi_UI_Optional";
+		};
+		class Item5
+		{
 			className="A3_Air_F";
 			name="Arma 3 Alpha - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item6
+		{
+			className="Kimi_HMDs_Helos";
+			name="Kimi_HMDs_Helos";
+		};
+		class Item7
 		{
 			className="A3_Air_F_Beta";
 			name="Arma 3 Beta - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item8
 		{
 			className="A3_Signs_F";
 			name="Arma 3 - Signs";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item9
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item10
 		{
 			className="A3_Roads_F";
 			name="Arma 3 - Roads";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item9
+		class Item11
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item12
 		{
 			className="Desert";
 			name="Desert";
 		};
-		class Item11
+		class Item13
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item14
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item15
 		{
 			className="A3_Props_F_Exp_A";
 			name="Arma 3 Nexus Update - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item16
 		{
 			className="A3_Characters_F_Exp";
 			name="Arma 3 Apex - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item17
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item16
+		class Item18
 		{
 			className="A3_Data_F_Exp_A";
 			name="Arma 3 Nexus Update - Main Configuration";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item17
+		class Item19
+		{
+			className="Kimi_HMDs_Wipeout";
+			name="Kimi_HMDs_Wipeout";
+		};
+		class Item20
 		{
 			className="A3_Air_F_EPC";
 			name="Arma 3 Win Episode - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item18
+		class Item21
+		{
+			className="Kimi_102_Weapons_Wipeout";
+			name="Kimi_102_Weapons_Wipeout";
+		};
+		class Item22
+		{
+			className="Kimi_Weapons_Helos";
+			name="Kimi_Weapons_Helos";
+		};
+		class Item23
 		{
 			className="A3_Air_F_Jets";
 			name="Arma 3 Jets - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item19
+		class Item24
 		{
 			className="A3_Air_F_Exp";
 			name="Arma 3 Apex - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item20
+		class Item25
 		{
 			className="RHNET_Actionbuilder";
 			name="RHNET_Actionbuilder";
 		};
-		class Item21
+		class Item26
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item22
+		class Item27
 		{
 			className="A3_Weapons_F_Orange";
 			name="Arma 3 Orange - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item23
+		class Item28
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item24
+		class Item29
 		{
 			className="A3_Characters_F_Mark";
 			name="Arma 3 Marksmen - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item25
+		class Item30
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item26
+		class Item31
 		{
 			className="A3_Structures_F_Bootcamp";
 			name="Arma 3 Bootcamp Update - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item27
+		class Item32
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item28
+		class Item33
 		{
 			className="A3_Characters_F_Orange";
 			name="Arma 3 Orange - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item29
+		class Item34
 		{
 			className="CTS_Zenith_Headgear";
 			name="CTS_Zenith_Headgear";
 		};
-		class Item30
+		class Item35
 		{
 			className="CTS_Units";
 			name="CTS - Uniforms and Gear";
 			author="Proxen";
 			url="http://www.ctsimulacion.com/";
 		};
-		class Item31
+		class Item36
 		{
 			className="CTS_Vests_Config";
 			name="CTS_Vests_Config";
 		};
-		class Item32
+		class Item37
 		{
 			className="3den_Objects";
 			name="3den_Objects";
 		};
-		class Item33
+		class Item38
 		{
 			className="A3_Structures_F_Exp_A";
 			name="Arma 3 Nexus Update - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item34
+		class Item39
 		{
 			className="A3_Structures_F_Kart";
 			name="Arma 3 Karts - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item35
+		class Item40
 		{
 			className="CUP_CAMisc";
 			name="CUP_CAMisc";
+		};
+		class Item41
+		{
+			className="globemaster_c17";
+			name="globemaster_c17";
+		};
+		class Item42
+		{
+			className="A3_Structures_F_Heli";
+			name="Arma 3 Helicopters - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 	};
 };
@@ -356,7 +402,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=358;
+		items=481;
 		class Item0
 		{
 			dataType="Object";
@@ -5001,7 +5047,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="missionConfigFile >> ""cfgOrbat"" >> ""Razor""";
+							value="missionConfigFile >> ""cfgOrbat"" >> ""Zero""";
 						};
 					};
 				};
@@ -5039,7 +5085,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="missionConfigFile >> ""cfgOrbat"" >> ""CTS_Aegis""";
+							value="missionConfigFile >> ""cfgOrbat"" >> ""CTS""";
 						};
 					};
 				};
@@ -15057,6 +15103,2598 @@ class Mission
 			};
 			id=1074;
 			type="HeliH";
+		};
+		class Item358
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1707.9945,59.44516,1264.8687};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1075;
+			type="globemaster_c17_altus";
+			atlOffset=51;
+		};
+		class Item359
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.2035,58.601746,1278.5881};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1079;
+			type="OfficeTable_01_new_F";
+		};
+		class Item360
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.33,59.278679,1278.571};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1086;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.84469223;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item361
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.9841,59.032085,1278.6517};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1094;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item362
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0029,59.056625,1278.1605};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1095;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item363
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0116,59.027782,1278.1602};
+				angles[]={0,1.5707963,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1096;
+			type="Land_PCSet_01_mousepad_F";
+		};
+		class Item364
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.1571,58.436382,1279.0894};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1097;
+			type="Land_PCSet_01_case_F";
+			atlOffset=53.17934;
+		};
+		class Item365
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.457,58.85376,1278.6526};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1098;
+			type="Land_OfficeChair_01_F";
+			atlOffset=53.179344;
+		};
+		class Item366
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.2035,58.601746,1277.2131};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1099;
+			type="OfficeTable_01_new_F";
+			atlOffset=0.0027542114;
+		};
+		class Item367
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.33,59.278679,1277.196};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1100;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.84744263;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item368
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.9841,59.032085,1277.2767};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1101;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item369
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0029,59.056625,1276.7855};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1102;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item370
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0116,59.027782,1276.7852};
+				angles[]={0,1.5707963,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1103;
+			type="Land_PCSet_01_mousepad_F";
+		};
+		class Item371
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.1571,58.436382,1277.7144};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1104;
+			type="Land_PCSet_01_case_F";
+			atlOffset=0.0017471313;
+		};
+		class Item372
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.457,58.85376,1277.2776};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1105;
+			type="Land_OfficeChair_01_F";
+			atlOffset=0.0026245117;
+		};
+		class Item373
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.2035,58.601746,1275.8381};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1106;
+			type="OfficeTable_01_new_F";
+			atlOffset=53.179352;
+		};
+		class Item374
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.33,59.278679,1275.821};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1107;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.84049606;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item375
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.9841,59.032085,1275.9017};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1108;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item376
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0029,59.056625,1275.4105};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1109;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item377
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0116,59.027782,1275.4102};
+				angles[]={0,1.5707963,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1110;
+			type="Land_PCSet_01_mousepad_F";
+		};
+		class Item378
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.1571,58.436382,1276.3394};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1111;
+			type="Land_PCSet_01_case_F";
+			atlOffset=53.179348;
+		};
+		class Item379
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.457,58.85376,1275.9026};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1112;
+			type="Land_OfficeChair_01_F";
+			atlOffset=53.179359;
+		};
+		class Item380
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.2035,58.601746,1274.4631};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1113;
+			type="OfficeTable_01_new_F";
+			atlOffset=53.17934;
+		};
+		class Item381
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.33,59.278679,1274.446};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1114;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.83613586;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item382
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.9841,59.032085,1274.5267};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1115;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item383
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0029,59.056625,1274.0355};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1116;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item384
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0116,59.027782,1274.0352};
+				angles[]={0,1.5707963,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1117;
+			type="Land_PCSet_01_mousepad_F";
+		};
+		class Item385
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.1571,58.436382,1274.9644};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1118;
+			type="Land_PCSet_01_case_F";
+			atlOffset=53.17934;
+		};
+		class Item386
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.457,58.85376,1274.5276};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1119;
+			type="Land_OfficeChair_01_F";
+			atlOffset=53.17934;
+		};
+		class Item387
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.2035,58.601746,1273.0881};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1120;
+			type="OfficeTable_01_new_F";
+			atlOffset=53.17934;
+		};
+		class Item388
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.33,59.278679,1273.071};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1121;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.83594131;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item389
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.9841,59.032085,1273.1517};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1122;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item390
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0029,59.056625,1272.6605};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1123;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item391
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0116,59.027782,1272.6602};
+				angles[]={0,1.5707963,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1124;
+			type="Land_PCSet_01_mousepad_F";
+		};
+		class Item392
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.1571,58.436382,1273.5894};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1125;
+			type="Land_PCSet_01_case_F";
+			atlOffset=53.17934;
+		};
+		class Item393
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.457,58.85376,1273.1526};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1126;
+			type="Land_OfficeChair_01_F";
+			atlOffset=53.17934;
+		};
+		class Item394
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.2035,58.601746,1271.7131};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1127;
+			type="OfficeTable_01_new_F";
+			atlOffset=53.17934;
+		};
+		class Item395
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.33,59.278679,1271.696};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1128;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.83575058;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item396
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.9841,59.032085,1271.7767};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1129;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item397
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0029,59.056625,1271.2855};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1130;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item398
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0116,59.027782,1271.2852};
+				angles[]={0,1.5707963,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1131;
+			type="Land_PCSet_01_mousepad_F";
+		};
+		class Item399
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.1571,58.436382,1272.2144};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1132;
+			type="Land_PCSet_01_case_F";
+			atlOffset=53.17934;
+		};
+		class Item400
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.457,58.85376,1271.7776};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1133;
+			type="Land_OfficeChair_01_F";
+			atlOffset=53.17934;
+		};
+		class Item401
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.2035,58.601746,1270.3381};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1134;
+			type="OfficeTable_01_new_F";
+			atlOffset=53.17934;
+		};
+		class Item402
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.33,59.278679,1270.321};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1135;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.83555603;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item403
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.9841,59.032085,1270.4017};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1136;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item404
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0029,59.056625,1269.9105};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1137;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item405
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0116,59.027782,1269.9102};
+				angles[]={0,1.5707963,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1138;
+			type="Land_PCSet_01_mousepad_F";
+		};
+		class Item406
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.1571,58.436382,1270.8394};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1139;
+			type="Land_PCSet_01_case_F";
+			atlOffset=53.17934;
+		};
+		class Item407
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.457,58.85376,1270.4026};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1140;
+			type="Land_OfficeChair_01_F";
+			atlOffset=53.17934;
+		};
+		class Item408
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.2035,58.601746,1268.9631};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1141;
+			type="OfficeTable_01_new_F";
+			atlOffset=53.17934;
+		};
+		class Item409
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.33,59.278679,1268.946};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1142;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.8353653;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item410
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.9841,59.032085,1269.0267};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1143;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item411
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0029,59.056625,1268.5355};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1144;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item412
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.0116,59.027782,1268.5352};
+				angles[]={0,1.5707963,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1145;
+			type="Land_PCSet_01_mousepad_F";
+		};
+		class Item413
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1710.1571,58.436382,1269.4644};
+				angles[]={0,1.5707964,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1146;
+			type="Land_PCSet_01_case_F";
+			atlOffset=53.17934;
+		};
+		class Item414
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.457,58.85376,1269.0276};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1147;
+			type="Land_OfficeChair_01_F";
+			atlOffset=53.17934;
+		};
+		class Item415
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.7621,58.601601,1268.8905};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1148;
+			type="OfficeTable_01_new_F";
+			atlOffset=53.179195;
+		};
+		class Item416
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.635,59.278679,1268.908};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1149;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.83535767;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item417
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9814,59.03194,1268.8269};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1150;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item418
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9626,59.056477,1269.3181};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1151;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item419
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.954,59.027634,1269.3185};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1152;
+			type="Land_PCSet_01_mousepad_F";
+			atlOffset=0.8354187;
+		};
+		class Item420
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.8085,58.436237,1268.3893};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1153;
+			type="Land_PCSet_01_case_F";
+			atlOffset=53.179195;
+		};
+		class Item421
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1706.5085,58.853615,1268.826};
+				angles[]={0,1.5707961,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1154;
+			type="Land_OfficeChair_01_F";
+			atlOffset=53.179195;
+		};
+		class Item422
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.7621,58.601601,1270.2655};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1155;
+			type="OfficeTable_01_new_F";
+			atlOffset=53.179195;
+		};
+		class Item423
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.635,59.278679,1270.283};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1156;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.83555222;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item424
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9814,59.03194,1270.2019};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1157;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item425
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9626,59.056477,1270.6931};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1158;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item426
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.954,59.027634,1270.6935};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1159;
+			type="Land_PCSet_01_mousepad_F";
+			atlOffset=0.83561325;
+		};
+		class Item427
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.8085,58.436237,1269.7643};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1160;
+			type="Land_PCSet_01_case_F";
+			atlOffset=53.179195;
+		};
+		class Item428
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1706.5085,58.853615,1270.201};
+				angles[]={0,1.5707961,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1161;
+			type="Land_OfficeChair_01_F";
+			atlOffset=53.179195;
+		};
+		class Item429
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.7621,58.601601,1271.6405};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1162;
+			type="OfficeTable_01_new_F";
+			atlOffset=53.179195;
+		};
+		class Item430
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.635,59.278679,1271.658};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1163;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.83574295;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item431
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9814,59.03194,1271.5769};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1164;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item432
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9626,59.056477,1272.0681};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1165;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item433
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.954,59.027634,1272.0685};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1166;
+			type="Land_PCSet_01_mousepad_F";
+			atlOffset=0.8358078;
+		};
+		class Item434
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.8085,58.436237,1271.1393};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1167;
+			type="Land_PCSet_01_case_F";
+			atlOffset=53.179195;
+		};
+		class Item435
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1706.5085,58.853615,1271.576};
+				angles[]={0,1.5707961,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1168;
+			type="Land_OfficeChair_01_F";
+			atlOffset=53.179195;
+		};
+		class Item436
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.7762,58.610466,1273.0256};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1169;
+			type="OfficeTable_01_new_F";
+		};
+		class Item437
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.635,59.278679,1273.033};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1170;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.8359375;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item438
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9814,59.03194,1272.9519};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1171;
+			type="Land_PCSet_01_keyboard_F";
+			atlOffset=0.83593369;
+		};
+		class Item439
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9626,59.056477,1273.4431};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1172;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item440
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.954,59.027634,1273.4435};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1173;
+			type="Land_PCSet_01_mousepad_F";
+			atlOffset=0.83599854;
+		};
+		class Item441
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.8085,58.436237,1272.5143};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1174;
+			type="Land_PCSet_01_case_F";
+			atlOffset=53.179195;
+		};
+		class Item442
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1706.5085,58.853615,1272.951};
+				angles[]={0,1.5707961,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1175;
+			type="Land_OfficeChair_01_F";
+			atlOffset=53.179195;
+		};
+		class Item443
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.7621,58.601601,1274.3905};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1176;
+			type="OfficeTable_01_new_F";
+			atlOffset=53.179195;
+		};
+		class Item444
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.635,59.278679,1274.408};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1177;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.83613205;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item445
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9814,59.03194,1274.3269};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1178;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item446
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9626,59.056477,1274.8181};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1179;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item447
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.954,59.027634,1274.8185};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1180;
+			type="Land_PCSet_01_mousepad_F";
+			atlOffset=0.83619308;
+		};
+		class Item448
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.8085,58.436237,1273.8893};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1181;
+			type="Land_PCSet_01_case_F";
+			atlOffset=53.179195;
+		};
+		class Item449
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1706.5085,58.853615,1274.326};
+				angles[]={0,1.5707961,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1182;
+			type="Land_OfficeChair_01_F";
+			atlOffset=53.179195;
+		};
+		class Item450
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.7621,58.601601,1275.7655};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1183;
+			type="OfficeTable_01_new_F";
+			atlOffset=53.179207;
+		};
+		class Item451
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.635,59.278679,1275.783};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1184;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.84023285;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item452
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9814,59.03194,1275.7019};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1185;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item453
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9626,59.056477,1276.1931};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1186;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item454
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.954,59.027634,1276.1935};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1187;
+			type="Land_PCSet_01_mousepad_F";
+			atlOffset=0.84309387;
+		};
+		class Item455
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.8085,58.436237,1275.2643};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1188;
+			type="Land_PCSet_01_case_F";
+			atlOffset=53.179203;
+		};
+		class Item456
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1706.5085,58.853615,1275.701};
+				angles[]={0,1.5707961,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1189;
+			type="Land_OfficeChair_01_F";
+			atlOffset=53.179214;
+		};
+		class Item457
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.7621,58.601601,1277.1405};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1190;
+			type="OfficeTable_01_new_F";
+			atlOffset=0.0027542114;
+		};
+		class Item458
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.635,59.278679,1277.158};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1191;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.84751892;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item459
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9814,59.03194,1277.0769};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1192;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item460
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9626,59.056477,1277.5681};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1193;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item461
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.954,59.027634,1277.5685};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1194;
+			type="Land_PCSet_01_mousepad_F";
+			atlOffset=0.84670258;
+		};
+		class Item462
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.8085,58.436237,1276.6393};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1195;
+			type="Land_PCSet_01_case_F";
+			atlOffset=0.0013847351;
+		};
+		class Item463
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1706.5085,58.853615,1277.076};
+				angles[]={0,1.5707961,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1196;
+			type="Land_OfficeChair_01_F";
+			atlOffset=0.0028800964;
+		};
+		class Item464
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.7621,58.601601,1278.5155};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1197;
+			type="OfficeTable_01_new_F";
+		};
+		class Item465
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.635,59.278679,1278.533};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1198;
+			type="Land_PCSet_01_screen_F";
+			atlOffset=0.84476852;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="cts_assets\monitor\monitor_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item466
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9814,59.03194,1278.4519};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1199;
+			type="Land_PCSet_01_keyboard_F";
+		};
+		class Item467
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.9626,59.056477,1278.9431};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1200;
+			type="Land_PCSet_01_mouse_F";
+		};
+		class Item468
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.954,59.027634,1278.9435};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1201;
+			type="Land_PCSet_01_mousepad_F";
+			atlOffset=0.84394836;
+		};
+		class Item469
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.8085,58.436237,1278.0143};
+				angles[]={0,4.712389,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1202;
+			type="Land_PCSet_01_case_F";
+			atlOffset=0.00099945068;
+		};
+		class Item470
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1706.5085,58.853615,1278.451};
+				angles[]={0,1.5707961,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1203;
+			type="Land_OfficeChair_01_F";
+			atlOffset=0.00012969971;
+		};
+		class Item471
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1708.015,61.147999,1282.132};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this setObjectTexture [0, ""\cts_assets\screen\screen01.paa""]}";
+			};
+			id=1204;
+			type="Tactical_Screen_On_F";
+			atlOffset=1.9259834;
+		};
+		class Item472
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1705.981,59.570999,1281.2531};
+				angles[]={0,5.497787,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{[this] call MRH_fnc_IsSatMonitor}";
+			};
+			id=1205;
+			type="Tactical_Screen_On_F";
+			atlOffset=0.36646271;
+		};
+		class Item473
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1707.96,59.584999,1282.075};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{[this] call MRH_fnc_IsSatMonitor}";
+			};
+			id=1206;
+			type="Tactical_Screen_On_F";
+			atlOffset=0.36411667;
+		};
+		class Item474
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1709.943,59.584999,1281.245};
+				angles[]={0,0.78539819,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{[this] call MRH_fnc_IsSatMonitor}";
+			};
+			id=1207;
+			type="Tactical_Screen_On_F";
+			atlOffset=0.38062286;
+		};
+		class Item475
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1707.715,59.182796,1279.8333};
+				angles[]={0,3.1415927,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this enablesimulation false; [this] call MRH_fnc_IsSatelliteConsole}";
+				disableSimulation=1;
+			};
+			id=1209;
+			type="Land_Laptop_unfolded_F";
+			atlOffset=0.84489059;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="\CTS_assets\Laptop\Laptop_01.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item476
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1707.9735,58.604324,1279.8763};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1210;
+			type="OfficeTable_01_new_F";
+		};
+		class Item477
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1707.7322,58.856339,1279.1357};
+				angles[]={0,3.1415927,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1211;
+			type="Land_OfficeChair_01_F";
+			atlOffset=0.0014839172;
+		};
+		class Item478
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1572.573,5,1295.006};
+			};
+			id=1214;
+			type="ModuleStrategicMapORBAT_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleStrategicMapORBAT_F_Path";
+					expression="_this setVariable ['Path',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionConfigFile >> ""cfgOrbat"" >> ""Raptor""";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleStrategicMapORBAT_F_Tags";
+					expression="_this setVariable ['Tags',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleStrategicMapORBAT_F_Parent";
+					expression="_this setVariable ['Parent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionConfigFile >> ""cfgOrbat"" >> ""CTS""";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleStrategicMapORBAT_F_Tiers";
+					expression="_this setVariable ['Tiers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item479
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1572.705,5,1282.17};
+			};
+			id=1215;
+			type="ModuleStrategicMapORBAT_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleStrategicMapORBAT_F_Path";
+					expression="_this setVariable ['Path',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionConfigFile >> ""cfgOrbat"" >> ""Hornet""";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleStrategicMapORBAT_F_Tags";
+					expression="_this setVariable ['Tags',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleStrategicMapORBAT_F_Parent";
+					expression="_this setVariable ['Parent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionConfigFile >> ""cfgOrbat"" >> ""CTS""";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleStrategicMapORBAT_F_Tiers";
+					expression="_this setVariable ['Tiers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item480
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1572.823,5,1270.828};
+			};
+			id=1216;
+			type="ModuleStrategicMapORBAT_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleStrategicMapORBAT_F_Path";
+					expression="_this setVariable ['Path',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionConfigFile >> ""cfgOrbat"" >> ""Arrow""";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleStrategicMapORBAT_F_Tags";
+					expression="_this setVariable ['Tags',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleStrategicMapORBAT_F_Parent";
+					expression="_this setVariable ['Parent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="missionConfigFile >> ""cfgOrbat"" >> ""CTS""";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleStrategicMapORBAT_F_Tiers";
+					expression="_this setVariable ['Tiers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=4;
+			};
 		};
 	};
 	class Connections

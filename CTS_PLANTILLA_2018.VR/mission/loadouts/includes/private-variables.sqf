@@ -35,7 +35,7 @@ private [
     "_wFLARE", "_rFLARE", "_gFLARE", "_yFLARE", "_cableTie", "_uavBattery", "_mapTools", "_flashlight",
     "_spareBarrel", "_kestrel", "_huntIRMonitor", "_huntIR", "_IRStrobe", "_clacker", "_M26clacker", "_defusalKit","_defib",
     "_deadManSwitch", "_earBuds", "_cellphone", "_kestrel", "_tragMX", "_rangeCard", "_microDAGR", "_NVGEN1", "_NVGEN2",
-    "_NVGEN4", "_NVWIDE", "_suppliesMEDIC", "_suppliesNORMAL", "_countTOURNIQUET", "_countBANDAGE",
+    "_NVGEN4", "_NVGEN4WIDE", "_NVGEN4WIDEBLK", "_NVWIDE", "_suppliesMEDIC", "_suppliesNORMAL", "_countTOURNIQUET", "_countBANDAGE",
     "_countMORPHINE", "_countEPI", "_countSALINE", "_countSALINE500", "_countBLOODBAG", "_countBandageCARGO",
     "_countMorphineCARGO", "_countEpiCARGO", "_countBloodbagCARGO", "_countBANDAGEPACKING"
 ];
@@ -50,7 +50,7 @@ private [
 #define BIPOD 3
 
 _defaultCallsignBLUFOR =
-["Zero", "Raptor", "Hornet", "Charlie", "Delta", "Razor", "Foxtrot", "Titan", "Lancer", "Sabre", "Spartan"];
+["Zero", "Raptor", "Hornet", "Arrow", "Delta", "Razor", "Foxtrot", "Titan", "Lancer", "Sabre", "Spartan"];
 
 _defaultCallsignOPFOR =
 ["Godfather", "Anaconda", "Boa", "Cobra", "Dragon", "Raven", "Scorpion", "Weasel", "Sparrow", "Pelican", "Moose"];

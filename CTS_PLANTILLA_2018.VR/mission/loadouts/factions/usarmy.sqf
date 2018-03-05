@@ -48,7 +48,7 @@ _commonRCO = "rhsusf_acc_ACOG3";
 _commonCCO = "rhsusf_acc_eotech_552";
 _commonMAGNIFIED = "optic_LRPS";
 _commonSUPPRESSOR = "rhsusf_acc_rotex5_grey";
-_commonPISTOLSUPPRESSOR = "RH_m9qd";
+_commonPISTOLSUPPRESSOR = "";
 _NVG = "rhsusf_ANPVS_15";
 
 // AMMO COUNT ==================================================================
@@ -104,8 +104,6 @@ _vestsLIST = [
 ];
 
 _goggleLIST = [
-    "TRYK_Shemagh_shade",
-    "TRYK_Shemagh",
     "empty"
 ];
 
@@ -127,10 +125,10 @@ _reconHEAD = "rhs_Booniehat_"+_camo;
 
 _commonUNIFORM = "rhs_uniform_cu_"+_camo;
 _officerUNIFORM = _commonUNIFORM;
-_pilotUNIFORM = "TRYK_OVERALL_SAGE";
+_pilotUNIFORM = _commonUNIFORM;
 _sniperUNIFORM = "U_B_GhillieSuit";
 _marksmanUNIFORM = _commonUNIFORM;
-_helicrewUNIFORM = "TRYK_OVERALL_SAGE";
+_helicrewUNIFORM = _commonUNIFORM;
 _crewUNIFORM = _commonUNIFORM;
 _mgUNIFORM = _commonUNIFORM;
 _medicUNIFORM = _commonUNIFORM;

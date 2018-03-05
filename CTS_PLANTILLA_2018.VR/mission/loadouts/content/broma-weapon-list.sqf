@@ -16,7 +16,9 @@ _30rnd556STANAG = "rhs_mag_30Rnd_556x45_Mk262_Stanag";
 _30rnd556STANAGT = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 _100rnd556 = "rhsusf_100Rnd_556x45_soft_pouch";
 _200rnd556 = "rhsusf_200Rnd_556x45_soft_pouch";
+_200rnd556M = "rhs_200rnd_556x45_M_SAW";
 _200rnd556T = "rhs_200rnd_556x45_T_SAW";
+
 
 // 4.6 SMG
 _40rnd46x30FMJ = "rhsusf_mag_40Rnd_46x30_FMJ";
@@ -49,6 +51,7 @@ _30rnd545AK = "rhs_30Rnd_545x39_AK";
 _30rnd762AKM = "rhs_30Rnd_762x39mm";
 _100rnd762PKP = "rhs_100Rnd_762x54mmR";
 _10rnd762SVD = "rhs_10Rnd_762x54mmR_7N1";
+_10rnd792 = "rhsgref_10Rnd_792x57_m76";
 
 // Launchers
 _RPGVL = "rhs_rpg7_PG7VL_mag";
@@ -58,9 +61,13 @@ _Igla9K38 = "rhs_mag_9k38_rocket";
 _VOG25 = "rhs_VOG25";
 
 // =============================================================================
+// AMMO GREF
+_30Rnd556STANAGGREF = "rhsgref_30rnd_556x45_m21";
+
+// =============================================================================
 // WEAPONS US
 // M4 / M16
-_RHSM16A4 = ["rhs_weap_m16a4_carryhandle",_30rnd556STANAG];
+_RHSM16A4 = ["rhs_weap_m16a4_carryhandle_pmag",_30rnd556STANAG];
 _RHSM16A42 = ["rhs_weap_m16a4_grip",_30rnd556STANAG];
 _RHSM16A4GL = ["rhs_weap_m16a4_carryhandle_M203", _30rnd556STANAG,_40mm];
 _RHSM4 = ["rhs_weap_m4_carryhandle",_30rnd556STANAG];
@@ -84,12 +91,15 @@ _RHSMP7WINTER = ["rhsusf_weap_MP7A1_winter",_40rnd46x30FMJ];
 _SR25 = ["rhs_weap_sr25", "rhsusf_20Rnd_762x51_m993_Mag"];
 _M2010 = ["rhs_weap_XM2010",_5rnd300win];
 _M14EBR = ["rhs_weap_m14ebrri",_20rnd762EBR];
+_M76 = ["rhs_weap_m76", _10rnd792];
 
 // LMG && MMG
-_M240B = ["rhs_weap_m240B",_100rnd762];
-_M240G = ["rhs_weap_m240G",_100rnd762];
-_M249S = ["rhs_weap_m249_pip_S",_100rnd556];
-_M249L = ["rhs_weap_m249_pip_L",_100rnd556];
+_M240B = ["rhs_weap_m240B", _200rnd556M];
+_M240G = ["rhs_weap_m240G", _200rnd556M];
+_M249 = ["rhs_weap_m249", _200rnd556M];
+_M249S = ["rhs_weap_m249_pip_S", _200rnd556M];
+_M249L = ["rhs_weap_m249_pip_L", _200rnd556M];
+_M249Minimi = ["rhs_weap_minimi_para_railed", _200rnd556M];
 
 // 320
 _M320 = ["rhs_weap_M320",_40mm];
@@ -119,10 +129,18 @@ _RHSAKS74U = ["rhs_weap_aks74u", _30rnd545AK];
 _SVD = ["rhs_weap_svdp",_10rnd762SVD];
 _SVDS = ["rhs_weap_svds",_10rnd762SVD];
 _SVDCAMO = ["rhs_weap_svdp_wd",_10rnd762SVD];
+_SVDM = ["rhs_weap_svdp_npz", _10rnd762SVD];
 
 // LMG && MMG
 _PKP = ["rhs_weap_pkp",_100rnd762PKP];
 _PKM = ["rhs_weap_pkm",_100rnd762PKP];
+
+// =============================================================================
+// WEAPONS GREF
+
+_RHSM21A = ["rhs_weap_m21a", _30Rnd556STANAGGREF];
+_RHSM21S = ["rhs_weap_m21s", _30Rnd556STANAGGREF];
+_RHSM21AGL = ["rhs_weap_m21a", _30Rnd556STANAGGREF, _VOG25];
 
 // =============================================================================
 // =============================================================================

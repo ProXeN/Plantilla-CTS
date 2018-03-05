@@ -1,5 +1,8 @@
 if (!hasinterface) exitWith {};
 
+//Increase TFAR range
+player setVariable ['tf_sendingDistanceMultiplicator', 2.5];
+
 0 spawn {
 
 	waitUntil {time > 10}; // Let TFAR init properly

@@ -39,8 +39,10 @@ _commonRCO = _SMASpecterBlack;
 _commonCCO = _RHSCCO;
 _commonMAGNIFIED = _AMS;
 _commonSUPPRESSOR = _RHSsup556;
+_commonMGSUPPRESSOR = _RHSsup556;
+_commonDMRSUPPRESSOR = _sup762;
 _commonPISTOLSUPPRESSOR = "";
-_NVG = _NVGEN4;
+_NVG = _NVGEN4WIDEBLK;
 
 _commonLASER = _RHSlaser;
 

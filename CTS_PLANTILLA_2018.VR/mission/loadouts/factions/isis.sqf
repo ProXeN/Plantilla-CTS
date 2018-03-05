@@ -126,7 +126,6 @@ _vestsLIST = [
     "LOP_V_CArrierLite_TRI",
     "LOP_V_CArrierLite_WDL",
     "LOP_V_CArrierLite_ANA"
-
 ];
 
 _randomHEAD = _headsLIST call BIS_fnc_selectRandom;
@@ -145,8 +144,8 @@ _grenadierVEST = _randomVEST;
 _medicVEST = _randomVEST;
 
 _commonHEAD = _randomHEAD;
-_leaderHEAD = "TRYK_H_pakol2";
-_officerHEAD = "TRYK_H_pakol2";
+_leaderHEAD = _commonHEAD;
+_officerHEAD = _commonHEAD;
 _medicHEAD = _commonHEAD;
 _crewmanHEAD = "rhs_tsh4";
 _pilotHEAD = "rhs_tsh4";
@@ -179,8 +178,8 @@ _demoVEST = _commonVEST;
 _marksmanVEST = _commonVEST;
 _reconVEST = _commonVEST;
 
-_commonBACKPACK = "TRYK_B_Alicepack";
-_bigBACKPACK = "TRYK_B_Alicepack";
+_commonBACKPACK = "rhsusf_falconii";
+_bigBACKPACK = "rhssaf_alice_smb";
 
 // EXTRA EQUIPMENT =============================================================
 
