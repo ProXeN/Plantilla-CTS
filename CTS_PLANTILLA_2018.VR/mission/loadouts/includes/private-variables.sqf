@@ -7,7 +7,7 @@ private [
     "_factionStructure", "_commonTracer", "_countTracerRIFLE", "_countTracerMG", "_StaticAT",
     "_commonVEST", "_commonRIFLE", "_commonRIFLEGL", "_commonPISTOL", "_UAVBag", "_UAVTerminal",
     "_commonMG", "_commonMARKSMAN", "_commonSNIPER", "_commonAT", "_specAT", "_specAA",
-    "_commonSMG","_commonRCO", "_commonCCO", "_commonMAGNIFIED", "_commonSUPPRESSOR",
+    "_commonSMG","_commonRCO", "_commonCCO", "_commonMAGNIFIED", "_commonSUPPRESSOR", "_commonMGSUPPRESSOR", "_commonDMRSUPPRESSOR",
     "_commonPISTOLSUPPRESSOR", "_NVG", "_commonLASER", "_countRIFLE", "_countRIFLELOW", "_countPISTOL",
     "_countMG", "_countMARKSMAN", "_countSNIPER", "_countAT", "_countGRENADES", "_count40mm", "_countRifleCARGO",
     "_commonRifleATTACHMENTS", "_commonHandgunATTACHMENTS", "_commonMGATTACHMENTS",
@@ -22,8 +22,8 @@ private [
     "_helicrewUNIFORM", "_crewUNIFORM", "_mgUNIFORM", "_medicUNIFORM", "_demoUNIFORM",
     "_reconUNIFORM", "_commonVEST", "_officerVEST", "_ftlVEST", "_slVEST", "_mgVEST",
     "_grenadierVEST", "_medicVEST", "_demoVEST", "_marksmanVEST", "_reconVEST",
-    "_commonBACKPACK", "_medBACKPACK", "_bigBACKPACK", "_HMG", "_tripod", "_mortar", "_mortarTripod",
-    "_commonMARKSMAN","_commonSNIPER","_commonAT","_specAT","_commonSMG","_commonBACKPACK",
+    "_commonBACKPACK", "_medBACKPACK", "_bigBACKPACK", "_radioBACKPACK","_HMG", "_tripod", "_mortar", "_mortarTripod",
+    "_commonMARKSMAN","_commonSNIPER","_commonAT","_specAT","_commonSMG",
     "_commonRCO","_commonCCO","_commonMAGNIFIED","_NVG","_countRifleCARGO", "_countPistolCARGO",
     "_countMgCARGO", "_countSniperCARGO", "_countATCARGO", "_countGrenadesCARGO", "_count40mmCARGO",
     "_countMorphineCARGO", "_countEpiCARGO", "_countBloodbagCARGO",
@@ -50,7 +50,7 @@ private [
 #define BIPOD 3
 
 _defaultCallsignBLUFOR =
-["Zero", "Raptor", "Hornet", "Arrow", "Delta", "Razor", "Foxtrot", "Titan", "Lancer", "Sabre", "Spartan"];
+["Zero", "Raptor", "Hornet", "Arrow", "Breacher", "Razor", "Foxtrot", "Titan", "Lancer", "Sabre", "Spartan"];
 
 _defaultCallsignOPFOR =
 ["Godfather", "Anaconda", "Boa", "Cobra", "Dragon", "Raven", "Scorpion", "Weasel", "Sparrow", "Pelican", "Moose"];

@@ -96,8 +96,8 @@ switch (true) do {
         _NVGEN1 = "ACE_NVG_Gen1";
         _NVGEN2 = "ACE_NVG_Gen2";
         _NVGEN4 = "ACE_NVG_Gen4";
-        _NVGEN4WIDE = "GEN4_A3_GPNVG18_F";
-        _NVGEN4WIDEBLK = "GEN4_A3_GPNVG18_BLK_F";
+        _NVGEN4WIDE = "A3_GPNVG18_F";
+        _NVGEN4WIDEBLK = "A3_GPNVG18_BLK_F";
         _NVWIDE = "ACE_NVG_Wide";
         _LRPS = "ACE_optic_LRPS_2D";
         _SOS = "ACE_optic_SOS_2D";

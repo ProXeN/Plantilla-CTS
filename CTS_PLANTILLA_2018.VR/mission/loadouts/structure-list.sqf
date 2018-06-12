@@ -4,10 +4,6 @@ switch (toUpper(_factionStructure)) do {
         #include "factions\structures\CTS.sqf"
     };
 
-    case "CTSOD": {
-        #include "factions\structures\CTSOD.sqf"
-    };
-
     case "HIGH-TIER": {
         #include "factions\structures\high_tier_army.sqf"
     };

@@ -43,8 +43,9 @@ units_AI_useVanillaGear = false; //IA
 
 side_a_side = west;                 // Bando de los jugadores.
 side_a_faction = "CTSMC";           // Facción de los jugadores. Las disponibles son:
-silenciadores = false;              // Activa o desactiva silenciadores
+silenciadores = true;              // Activa o desactiva silenciadores
 nocturno = true;                    // Activa o desactiva equipamiento nocturno
+baseBriefing = false;                        // True si salimos sin equipar en base
 // MULTICAM "CTSMC"
 // MULTICAM ARIDO "CTSMCA"
 // MULTICAM TROPIC "CTSMCT"

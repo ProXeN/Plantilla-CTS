@@ -9,7 +9,7 @@
 
 _factionID = "CTS";
 _factionName = "Unidad CTS";
-_factionStructure = "CTSOD";
+_factionStructure = "CTS";
 
 _factionCallsigns = _defaultCallsignBLUFOR;
 
@@ -27,7 +27,7 @@ _factionSkill = [[0.7,0.8],   [0.8,0.9],      [0.7,0.8],     [0.7,0.9],      [0.
 
 _commonRIFLE = _RHSHK416D145;
 _commonRIFLEGL = _RHSHK416D145M320;
-_commonPISTOL = _M9;
+_commonPISTOL = _FNP45;
 _commonMG = _M249L;
 _commonMARKSMAN = _EMRBlack;
 _commonSNIPER = _GM6;
@@ -41,7 +41,7 @@ _commonMAGNIFIED = _AMS;
 _commonSUPPRESSOR = _RHSsup556;
 _commonMGSUPPRESSOR = _RHSsup556;
 _commonDMRSUPPRESSOR = _sup762;
-_commonPISTOLSUPPRESSOR = "";
+_commonPISTOLSUPPRESSOR = "rh_gemtech45";
 _NVG = _NVGEN4WIDEBLK;
 
 _commonLASER = _RHSlaser;
@@ -50,7 +50,7 @@ _commonLASER = _RHSlaser;
 
 _countRIFLE = 6;
 _countRIFLELOW = 5;
-_countPISTOL = 2;
+_countPISTOL = 3;
 _countMG = 4;
 _countMARKSMAN = 10;
 _countSNIPER = 8;
@@ -91,11 +91,18 @@ _headsLIST = [
     "CTS_MCT_Helmet",
     "CTS_MCT_Helmet_simple",
     "CTS_MCT_Helmet_light",
-    "CTS_Mich2000_OD",
-    "CTS_Mich2000_2_OD",
-    "CTS_OPS_OD",
-    "CTS_OD_OPS_2",
-    "CTS_AirFrame"
+    "CTS_Mich2000_MulticamTropic",
+    "CTS_Mich2000_CamoSprayOD",
+    "CTS_Mich2000_OGA_OD",
+    "CTS_Mich2000_2_MulticamTropic",
+    "CTS_Mich2000_2_CamoSprayOD",
+    "CTS_Mich2000_2_OGA_OD",
+    "CTS_MulticamTropic_OPS",
+    "CTS_OD_Spray_OPS",
+    "CTS_OGA_OD_OPS",
+    "CTS_MulticamTropic_OPS_2",
+    "CTS_OD_Spray_OPS_2",
+    "CTS_OGA_OD_OPS_2"
 ];
 
 _reconheadsLIST = [
@@ -130,7 +137,12 @@ _vestsLIST = [
     "CTS_FAPC_Operator_MulticamTropic",
     "CTS_CarrierRig_Operator_MulticamTropic",
     "CTS_LBT6094_operator_MulticamTropic",
-    "CTS_RAV_operator_MulticamTropic"
+    "CTS_RAV_operator_MulticamTropic",
+    "CTS_CIRAS_Ranger",
+    "CTS_CIRAS_3_Ranger",
+    "CTS_JPC_Ranger",
+    "CTS_JPC_3_Ranger",
+    "CTS_Armatus_1_Ranger"
 ];
 
 _goggleLIST = [
@@ -171,18 +183,19 @@ _reconUNIFORM = _commonUNIFORM;
 
 _commonVEST = _randomVEST;
 _officerVEST = _commonVEST;
-_ftlVEST = "CTS_RAV_Breacher_MulticamTropic";
+_ftlVEST = "CTS_CIRAS_2_Ranger";
 _slVEST = _commonVEST;
 _mgVEST = "CTS_CarrierRig_Gunner_MulticamTropic";
 _grenadierVEST = _commonVEST;
-_medicVEST = _commonVEST;
+_medicVEST = "CTS_JPC_2_Ranger";
 _demoVEST = _commonVEST;
-_marksmanVEST = _commonVEST;
+_marksmanVEST = "CTS_Armatus_2_Ranger";
 _reconVEST = _commonVEST;
 
 _commonBACKPACK = "CTS_MCT_Backpack_compact";
 _bigBACKPACK = "CTS_MCT_Backpack_CarryAll";
-_medBACKPACK = "CTS_MCT_Kitbag_compact";
+_medBACKPACK = "CTS_MCT_Kitbag_compact"; 
+_radioBACKPACK = "tfw_ilbe_dd_gr";
 
 // EXTRA EQUIPMENT =============================================================
 

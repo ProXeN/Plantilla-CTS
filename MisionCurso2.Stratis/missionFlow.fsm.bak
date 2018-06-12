@@ -1,0 +1,278 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, missionFlow">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,-300.000000,3850.000000,-200.000000,3900.000000,0.000000,"Init"};
+item1[] = {"__alive_Redfox",4,218,-450.000000,4050.000000,-350.000000,4100.000000,0.000000,"!alive" \n "Redfox"};
+item2[] = {"On_Mission",2,250,-300.000000,4050.000000,-200.000000,4100.000000,0.000000,"On Mission"};
+item3[] = {"_",8,218,-300.000000,3950.000000,-200.000000,4000.000000,0.000000,""};
+item4[] = {"TaskRedfox_Succe",2,250,-450.000000,3950.000000,-350.000000,4000.000000,0.000000,"TaskRedfox" \n "Succeeded"};
+item5[] = {"Hack_Completed",4,218,-600.000000,4050.000000,-500.000000,4100.000000,0.000000,"Hack" \n "Completed"};
+item6[] = {"TaskHack_Succeed",2,250,-600.000000,3950.000000,-500.000000,4000.000000,0.000000,"TaskHack" \n "Succeeded"};
+item7[] = {"Rescue_Completed",4,218,-750.000000,4050.000000,-650.000000,4100.000000,0.000000,"Rescue" \n "Completed"};
+item8[] = {"TaskRescue_Succe",2,250,-750.000000,3950.000000,-650.000000,4000.000000,0.000000,"TaskRescue" \n "Succeeded"};
+item9[] = {"Comms_Completed",4,218,-900.000000,4050.000000,-800.000000,4100.000000,0.000000,"Comms" \n "Completed"};
+item10[] = {"TaskComms_Succee",2,250,-900.000000,3950.000000,-800.000000,4000.000000,0.000000,"TaskComms" \n "Succeeded"};
+item11[] = {"All_Succeded",4,218,-300.000000,4125.000000,-200.000000,4175.000000,0.000000,"All" \n "Succeded"};
+item12[] = {"End",1,250,-300.000000,4225.000000,-200.000000,4275.000000,0.000000,"End"};
+item13[] = {"VIP_DEAD",4,218,-150.000000,4050.000000,-50.000000,4100.000000,0.000000,"VIP DEAD"};
+item14[] = {"FAIL",1,4346,0.000000,4050.000000,100.000000,4100.000000,0.000000,"FAIL"};
+link0[] = {0,3};
+link1[] = {1,4};
+link2[] = {2,1};
+link3[] = {2,5};
+link4[] = {2,7};
+link5[] = {2,9};
+link6[] = {2,11};
+link7[] = {2,13};
+link8[] = {3,2};
+link9[] = {4,3};
+link10[] = {5,6};
+link11[] = {6,3};
+link12[] = {7,8};
+link13[] = {8,3};
+link14[] = {9,10};
+link15[] = {10,3};
+link16[] = {11,12};
+link17[] = {13,14};
+globals[] = {0.000000,0,0,0,0,640,480,1,43,6316128,1,-634.448730,148.725098,4262.919434,3811.847168,1231,709,1};
+window[] = {0,-1,-1,-1,-1,907,44,2523,44,1,1243};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "missionFlow";
+        class States
+        {
+                /*%FSM<STATE "Init">*/
+                class Init
+                {
+                        name = "Init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="On_Mission";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "On_Mission">*/
+                class On_Mission
+                {
+                        name = "On_Mission";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Hack_Completed">*/
+                                class Hack_Completed
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="TaskHack_Succeed";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil ""HackCompleted"" && isNil ""_taskHack"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Rescue_Completed">*/
+                                class Rescue_Completed
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="TaskRescue_Succe";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil ""RescueCompleted"" && isNil ""_taskRescue"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Comms_Completed">*/
+                                class Comms_Completed
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="TaskComms_Succee";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil ""CommsCompleted"" && isNil ""_taskComms"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "All_Succeded">*/
+                                class All_Succeded
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNil ""_taskRedfox"" &&" \n
+                                         "!isNil ""_taskHack"" &&" \n
+                                         "!isNil ""_taskRescue"" &&" \n
+                                         "!isNil ""_taskComms"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "VIP_DEAD">*/
+                                class VIP_DEAD
+                                {
+                                        itemno = 13;
+                                        priority = 0.000000;
+                                        to="FAIL";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive VIP"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "__alive_Redfox">*/
+                                class __alive_Redfox
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="TaskRedfox_Succe";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!alive Redfox && isNil ""_taskRedfox"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "TaskRedfox_Succe">*/
+                class TaskRedfox_Succe
+                {
+                        name = "TaskRedfox_Succe";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"_taskRedfox = true;" \n
+                         "[""taskRedfox"", ""succeeded""] call FHQ_fnc_ttSetTaskState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="On_Mission";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "TaskHack_Succeed">*/
+                class TaskHack_Succeed
+                {
+                        name = "TaskHack_Succeed";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"_taskHack = true;" \n
+                         "[""taskHack"", ""succeeded""] call FHQ_fnc_ttSetTaskState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="On_Mission";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "TaskRescue_Succe">*/
+                class TaskRescue_Succe
+                {
+                        name = "TaskRescue_Succe";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"_taskRescue = true;" \n
+                         "[""taskRescue"", ""succeeded""] call FHQ_fnc_ttSetTaskState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="On_Mission";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "TaskComms_Succee">*/
+                class TaskComms_Succee
+                {
+                        name = "TaskComms_Succee";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"_taskComms = true;" \n
+                         "[""taskComms"", ""succeeded""] call FHQ_fnc_ttSetTaskState;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="On_Mission";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End">*/
+                class End
+                {
+                        name = "End";
+                        itemno = 12;
+                        init = /*%FSM<STATEINIT""">*/"[endings_victory] call BRM_fnc_callEnding;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "FAIL">*/
+                class FAIL
+                {
+                        name = "FAIL";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"[""taskRescue"", ""failed""] call FHQ_fnc_ttSetTaskState;" \n
+                         "[endings_defeat] call BRM_fnc_callEnding;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Init";
+        finalStates[] =
+        {
+                "End",
+                "FAIL",
+        };
+};
+/*%FSM</COMPILE>*/

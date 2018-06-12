@@ -100,9 +100,15 @@ switch(_x) do {
 
     case "explosives": {
         [[_object,"item",
-            [_SLAM, 3],
-            [_C4, 3],
-            [_satchelCharge, 3]
+            [_SLAM, 30],
+            [_C4, 30],
+            [_satchelCharge, 30],
+            [_breachingCharge, 30],
+            [_APERSDispenser, 30],
+            [_demoCharge, 30],
+            [_APERS, 30],
+            [_Claymore, 30]
+
         ]] call BRM_fnc_addtoCargo;
     };
 };

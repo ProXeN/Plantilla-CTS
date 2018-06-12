@@ -27,7 +27,7 @@ _factionSkill = [[0.7,0.8],   [0.8,0.9],      [0.7,0.8],     [0.7,0.9],      [0.
 
 _commonRIFLE = _RHSHK416D145;
 _commonRIFLEGL = _RHSHK416D145M320;
-_commonPISTOL = _M9;
+_commonPISTOL = _FNP45;
 _commonMG = _M249L;
 _commonMARKSMAN = _EMRBlack;
 _commonSNIPER = _GM6;
@@ -41,7 +41,7 @@ _commonMAGNIFIED = _AMS;
 _commonSUPPRESSOR = _RHSsup556;
 _commonMGSUPPRESSOR = _RHSsup556;
 _commonDMRSUPPRESSOR = _sup762;
-_commonPISTOLSUPPRESSOR = "";
+_commonPISTOLSUPPRESSOR = "rh_gemtech45";
 _NVG = _NVGEN4WIDE;
 
 _commonLASER = _RHSlaser;
@@ -50,7 +50,7 @@ _commonLASER = _RHSlaser;
 
 _countRIFLE = 6;
 _countRIFLELOW = 5;
-_countPISTOL = 2;
+_countPISTOL = 3;
 _countMG = 4;
 _countMARKSMAN = 10;
 _countSNIPER = 8;
@@ -134,7 +134,14 @@ _vestsLIST = [
     "CTS_FAPC_Operator_OGA",
     "CTS_CarrierRig_Operator_OGA",
     "CTS_LBT6094_operator_OGA",
-    "CTS_RAV_operator_OGA"
+    "CTS_LBT6094_gen2_556",
+    "CTS_LBT6094_gen2",
+    "CTS_RAV_operator_OGA",
+    "CTS_CIRAS",
+    "CTS_CIRAS_3",
+    "CTS_JPC",
+    "CTS_JPC_3",
+    "CTS_Armatus_1"
 ];
 
 _goggleLIST = [
@@ -175,18 +182,19 @@ _reconUNIFORM = _commonUNIFORM;
 
 _commonVEST = _randomVEST;
 _officerVEST = _commonVEST;
-_ftlVEST = "CTS_RAV_Breacher_Multicam";
+_ftlVEST = "CTS_CIRAS_2";
 _slVEST = _commonVEST;
 _mgVEST = "CTS_CarrierRig_Gunner_Multicam";
 _grenadierVEST = _commonVEST;
-_medicVEST = _commonVEST;
+_medicVEST = "CTS_JPC_2";
 _demoVEST = _commonVEST;
-_marksmanVEST = _commonVEST;
+_marksmanVEST = "CTS_Armatus_2";
 _reconVEST = _commonVEST;
 
 _commonBACKPACK = "CTS_MC_Backpack_compact";
 _bigBACKPACK = "CTS_MC_Backpack_CarryAll";
 _medBACKPACK = "CTS_MC_Kitbag_compact";
+_radioBACKPACK = "tfw_ilbe_dd_coy";
 
 // EXTRA EQUIPMENT =============================================================
 

@@ -125,6 +125,7 @@ _apMINEopfor = "rhs_mine_pmn2_mag";
 _SLAM = "SLAMDirectionalMine_Wire_Mag";
 _C4 = "DemoCharge_Remote_Mag";
 _satchelCharge = "SatchelCharge_Remote_Mag";
+_breachingCharge= "AMP_Breaching_Charge_Mag";
 
 // UTILITY =====================================================================
 

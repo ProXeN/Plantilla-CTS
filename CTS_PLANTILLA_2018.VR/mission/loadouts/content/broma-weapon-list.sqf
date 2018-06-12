@@ -34,6 +34,9 @@ _100rnd762 = "rhsusf_100Rnd_762x51";
 _5rndBuck = "rhsusf_5Rnd_00Buck";
 _8rndBuck = "rhsusf_8Rnd_00Buck";
 
+// SKS SG Works
+_20Rnd762SKS = "SMA_30Rnd_762x39_SKS_FMJ";
+
 // Launchers
 _FGM8Jav = "rhs_fgm148_magazine_AT";
 _FIM92 = "rhs_fim92_mag";
@@ -41,6 +44,11 @@ _FIM92 = "rhs_fim92_mag";
 // Pistols
 _M9 = ["rhsusf_weap_m9","rhsusf_mag_15Rnd_9x19_JHP"];
 _Glock = ["rhsusf_weap_glock17g4", "rhsusf_mag_17Rnd_9x19_JHP"];
+_RHSM1911A1 = ["rhsusf_weap_m1911a1", "rhsusf_mag_7x45acp_MHP"];
+_P226 = ["RH_P226", "RH_15Rnd_9x19_SIG"];
+_FN57 = ["RH_FN57", "RH_20Rnd_57x28_FN"];
+_FNP45 = ["RH_FNP45", "RH_15Rnd_45cal_fnp"];
+_USP = ["RH_USP", "RH_12Rnd_45cal_usp"];
 
 // =============================================================================
 // AMMO RU
@@ -100,6 +108,9 @@ _M249 = ["rhs_weap_m249", _200rnd556M];
 _M249S = ["rhs_weap_m249_pip_S", _200rnd556M];
 _M249L = ["rhs_weap_m249_pip_L", _200rnd556M];
 _M249Minimi = ["rhs_weap_minimi_para_railed", _200rnd556M];
+
+// SKS SG Works
+_SKSBullpup = ["SMA_SKS_F",_20Rnd762SKS];
 
 // 320
 _M320 = ["rhs_weap_M320",_40mm];

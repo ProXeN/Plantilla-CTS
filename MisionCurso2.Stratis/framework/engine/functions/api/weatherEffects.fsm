@@ -1,0 +1,480 @@
+/*%FSM<COMPILE "H:\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, weatherEffect">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Start",0,4346,-900.000000,-1790.000000,-800.000000,-1740.000000,0.000000,"Start"};
+item1[] = {"_",8,218,-860.000000,-1725.000000,-840.000000,-1715.000000,0.000000,""};
+item2[] = {"no_display",4,218,-760.000000,-1785.000000,-700.000000,-1745.000000,0.000000,"no" \n "display"};
+item3[] = {"Not_a_client",1,250,-680.000000,-1785.000000,-610.000000,-1745.000000,0.000000,"Not a client"};
+item4[] = {"_",8,218,-1025.000000,-1640.000000,-1005.000000,-1630.000000,0.000000,""};
+item5[] = {"Check_new",2,250,-880.000000,-1650.000000,-820.000000,-1620.000000,0.000000,"Check" \n "new"};
+item6[] = {"Update",2,250,-1045.000000,-1700.000000,-985.000000,-1665.000000,0.000000,"Update"};
+item7[] = {"fog",4,218,-875.000000,-1595.000000,-825.000000,-1565.000000,1.000000,"fog"};
+item8[] = {"create_fog",2,250,-1045.000000,-1595.000000,-985.000000,-1565.000000,0.000000,"create" \n "fog"};
+item9[] = {"__fog",4,218,-875.000000,-1540.000000,-825.000000,-1510.000000,1.000000,"!fog"};
+item10[] = {"delete_fog",2,250,-1045.000000,-1540.000000,-985.000000,-1510.000000,0.000000,"delete" \n "fog"};
+item11[] = {"Delay",4,218,-950.000000,-1695.000000,-900.000000,-1670.000000,0.000000,"Delay"};
+item12[] = {"",7,210,-854.000000,-1686.500000,-846.000000,-1678.500000,0.000000,""};
+item13[] = {"snow",4,218,-875.000000,-1490.000000,-825.000000,-1460.000000,1.000000,"snow"};
+item14[] = {"create_snow",2,250,-1045.000000,-1490.000000,-985.000000,-1460.000000,0.000000,"create" \n "snow"};
+item15[] = {"__snow",4,218,-875.000000,-1440.000000,-825.000000,-1410.000000,1.000000,"!snow"};
+item16[] = {"delete_snow",2,250,-1045.000000,-1440.000000,-985.000000,-1410.000000,0.000000,"delete" \n "snow"};
+item17[] = {"sand",4,218,-875.000000,-1385.000000,-825.000000,-1355.000000,1.000000,"sand"};
+item18[] = {"create_sand",2,250,-1045.000000,-1385.000000,-985.000000,-1355.000000,0.000000,"create" \n "sand"};
+item19[] = {"__sand",4,218,-875.000000,-1330.000000,-825.000000,-1300.000000,1.000000,"!sand"};
+item20[] = {"delete_sand",2,250,-1045.000000,-1330.000000,-985.000000,-1300.000000,0.000000,"delete" \n "sand"};
+link0[] = {0,1};
+link1[] = {0,2};
+link2[] = {1,5};
+link3[] = {2,3};
+link4[] = {4,6};
+link5[] = {5,4};
+link6[] = {5,7};
+link7[] = {5,9};
+link8[] = {5,13};
+link9[] = {5,15};
+link10[] = {5,17};
+link11[] = {5,19};
+link12[] = {6,11};
+link13[] = {7,8};
+link14[] = {8,4};
+link15[] = {9,10};
+link16[] = {10,4};
+link17[] = {11,12};
+link18[] = {12,5};
+link19[] = {13,14};
+link20[] = {14,4};
+link21[] = {15,16};
+link22[] = {16,4};
+link23[] = {17,18};
+link24[] = {18,4};
+link25[] = {19,20};
+link26[] = {20,4};
+globals[] = {0.000000,0,0,0,0,640,480,1,491,6316128,1,-1180.770142,-607.158508,-1227.380127,-1786.636597,959,935,1};
+window[] = {2,-1,-1,-1,-1,1014,78,1310,78,3,977};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "weatherEffect";
+        class States
+        {
+                /*%FSM<STATE "Start">*/
+                class Start
+                {
+                        name = "Start";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"/* FSM controlling particle systems." \n
+                         " * Parameters:" \n
+                         " * param [0] - Object that the particle system will be attached to," \n
+                         " *             objNull for camera" \n
+                         " *" \n
+                         " * param [1] - List of effects and their selectors" \n
+                         " *" \n
+                         " *" \n
+                         " * Selectors work like this:" \n
+                         " *  Each entry in the effect list is an array of [""name"", {code}]." \n
+                         " *    Name is either snow, fog or sand." \n
+                         " *    Code is the code that evaluates whether the effect is shown or not. Must return " \n
+                         " *    true or false. If always shown, code should be {true}" \n
+                         " */" \n
+                         "" \n
+                         "_target = param [0, cameraOn, [objNull]];" \n
+                         "_effects = param [1, [], [[]]];" \n
+                         "" \n
+                         "" \n
+                         "FHQ_handleSnow = {false};" \n
+                         "FHQ_handleFog = {false};" \n
+                         "FHQ_handleSand = {false};" \n
+                         "FHQ_handleWind = {false};" \n
+                         "" \n
+                         "{" \n
+                         "	_name = _x param [0];" \n
+                         "	_code = _x param [1, {true}, [{true}]];" \n
+                         "	" \n
+                         "	_code call compile format [""FHQ_handle%1 = _this;"", _name];" \n
+                         "} forEach _effects;" \n
+                         "" \n
+                         "_effectList = [];" \n
+                         "_lastWindTime = 0;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "no_display">*/
+                                class no_display
+                                {
+                                        itemno = 2;
+                                        priority = 0.000000;
+                                        to="Not_a_client";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!hasInterface"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Check_new";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Not_a_client">*/
+                class Not_a_client
+                {
+                        name = "Not_a_client";
+                        itemno = 3;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Check_new">*/
+                class Check_new
+                {
+                        name = "Check_new";
+                        itemno = 5;
+                        init = /*%FSM<STATEINIT""">*/"_doSnow = call FHQ_handleSnow;" \n
+                         "_doFog = call FHQ_handleFog;" \n
+                         "_doSand = call FHQ_handleSand;" \n
+                         "_doWind = call FHQ_handleWind;" \n
+                         "" \n
+                         "_currentTime = time;" \n
+                         "" \n
+                         "//diag_log format[""%1 %2 %3"", _doSnow, _doFog, _doSand];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "fog">*/
+                                class fog
+                                {
+                                        itemno = 7;
+                                        priority = 1.000000;
+                                        to="create_fog";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_doFog && isNil ""FHQ_GrndFog"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "__fog">*/
+                                class __fog
+                                {
+                                        itemno = 9;
+                                        priority = 1.000000;
+                                        to="delete_fog";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_doFog && !isNil ""FHQ_GrndFog"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "snow">*/
+                                class snow
+                                {
+                                        itemno = 13;
+                                        priority = 1.000000;
+                                        to="create_snow";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_doSnow && isNil ""FHQ_Snow"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "__snow">*/
+                                class __snow
+                                {
+                                        itemno = 15;
+                                        priority = 1.000000;
+                                        to="delete_snow";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_doSnow && !isNil ""FHQ_Snow"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "sand">*/
+                                class sand
+                                {
+                                        itemno = 17;
+                                        priority = 1.000000;
+                                        to="create_sand";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_doSand && isNil ""FHQ_Sand"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "__sand">*/
+                                class __sand
+                                {
+                                        itemno = 19;
+                                        priority = 1.000000;
+                                        to="delete_sand";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!_doSand && !isNil ""FHQ_Sand"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="Update";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Update">*/
+                class Update
+                {
+                        name = "Update";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"_pos = getPos _target;" \n
+                         "" \n
+                         "{" \n
+                         "	_obj = _x param [0];" \n
+                         "	_ground = _x param [1];" \n
+                         "" \n
+                         "	if (_ground) then {" \n
+                         "		_obj setPos [_pos select 0, _pos select 1, 0];" \n
+                         "	} else {" \n
+                         "		_obj setPos _pos;" \n
+                         "	}" \n
+                         "} forEach _effectList;" \n
+                         "" \n
+                         "_currentTime = time;" \n
+                         "" \n
+                         "if (_doWind) then {" \n
+                         "	if (time - _lastWindTime > 3) then {" \n
+                         "		_lastWindTime = time;" \n
+                         "		playsound ([""wind1"", ""wind2"", ""wind3"", ""wind4"", ""wind5""] call BIS_fnc_selectRandom);" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Delay">*/
+                                class Delay
+                                {
+                                        itemno = 11;
+                                        priority = 0.000000;
+                                        to="Check_new";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"time - _currentTime > 0.1;"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "create_fog">*/
+                class create_fog
+                {
+                        name = "create_fog";
+                        itemno = 8;
+                        init = /*%FSM<STATEINIT""">*/"_pos = position _target;" \n
+                         "" \n
+                         "_brightness = 1.0;" \n
+                         "FHQ_GrndFog = ""#particlesource"" createVehicleLocal _pos;  " \n
+                         "FHQ_GrndFog setParticleParams [" \n
+                         "    [""\a3\data_f\ParticleEffects\Universal\Universal.p3d"", " \n
+                         "    16, 12, 13, 0], """", ""Billboard"", " \n
+                         "    1, 10, " \n
+                         "    [0, 0, -6], wind, 1, 1.275, 1, 0, [4], " \n
+                         "    [[_brightness, _brightness, _brightness, 0], " \n
+                         "		[_brightness, _brightness, _brightness, 0.04], " \n
+                         "    [1, 1, 1, 0]], [1000], 1, 0, """", """", """"];" \n
+                         "FHQ_GrndFog setParticleRandom [3, [40, 40, 0], [0, 0, 0], 2, 0.5, [0, 0, 0, 0.1], 0, 0];" \n
+                         "FHQ_GrndFog setParticleCircle [0.1, [0, 0, 0]];" \n
+                         "FHQ_GrndFog setDropInterval 0.025;" \n
+                         "" \n
+                         "_effectList = _effectList + [[FHQ_GrndFog, true]];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="Update";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "delete_fog">*/
+                class delete_fog
+                {
+                        name = "delete_fog";
+                        itemno = 10;
+                        init = /*%FSM<STATEINIT""">*/"_effectList = _effectList - [[FHQ_GrndFog, true]];" \n
+                         "" \n
+                         "deleteVehicle FHQ_GrndFog;" \n
+                         "FHQ_GrndFog = nil;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="Update";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "create_snow">*/
+                class create_snow
+                {
+                        name = "create_snow";
+                        itemno = 14;
+                        init = /*%FSM<STATEINIT""">*/"_pos = position _target;" \n
+                         "" \n
+                         "FHQ_Snow = ""#particlesource"" createVehicleLocal _pos;  " \n
+                         "FHQ_Snow setParticleParams [" \n
+                         "	[""\a3\data_f\ParticleEffects\Universal\Universal.p3d"", 16, 12, 8, 1], """"," \n
+                         "		""Billboard"", 1,	4, [0,0,0], wind, 1, 0.000001, 	0, 1.4," \n
+                         "		[0.05,0.05], [[1,1,1,1]], [0,1], 0.2, 1.2," \n
+                         "		"""", """", """"" \n
+                         "];" \n
+                         "FHQ_Snow setParticleRandom [0, [10, 10, 7], [0, 0, 0], 0, 0.01, [0, 0, 0, 0.1], 0, 0];" \n
+                         "FHQ_Snow setParticleCircle [0.0, [0, 0, 0]];" \n
+                         "FHQ_Snow setDropInterval 0.001;" \n
+                         "" \n
+                         "_effectList = _effectList + [[FHQ_Snow, false]];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="Update";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "delete_snow">*/
+                class delete_snow
+                {
+                        name = "delete_snow";
+                        itemno = 16;
+                        init = /*%FSM<STATEINIT""">*/"_effectList = _effectList - [[FHQ_Snow, false]];" \n
+                         "" \n
+                         "deleteVehicle FHQ_Snow;" \n
+                         "FHQ_Snow = nil;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="Update";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "create_sand">*/
+                class create_sand
+                {
+                        name = "create_sand";
+                        itemno = 18;
+                        init = /*%FSM<STATEINIT""">*/"_pos = position _target;" \n
+                         "" \n
+                         "_brightness = 1.0;" \n
+                         "" \n
+                         "_color = [1.0 * _brightness, 0.9 * _brightness, 0.8 * _brightness];" \n
+                         "" \n
+                         "FHQ_Sand = ""#particlesource"" createVehicleLocal _pos;  " \n
+                         "FHQ_Sand setParticleParams [[""A3\Data_F\ParticleEffects\Universal\universal.p3d"", 16, 12, 8, 0], """", ""Billboard"", 1, " \n
+                         "	2, [0, 0, 0], wind, 1, 1.275, 1, 0, [5], " \n
+                         "	[" \n
+                         "		[1.0 * _brightness, 0.9 * _brightness, 0.8 * _brightness, 0]," \n
+                         "		[1.0 * _brightness, 0.9 * _brightness, 0.8 * _brightness, 0.2]," \n
+                         "		[1.0 * _brightness, 0.9 * _brightness, 0.8 * _brightness, 0]" \n
+                         "	]," \n
+                         "	[1000], 1, 0, """", """", """"];" \n
+                         "FHQ_Sand setParticleRandom [3, [10, 10, 0], [0, 0, 0], 1, 0, [0, 0, 0, 0.05], 0, 0];" \n
+                         "FHQ_Sand setParticleCircle [0.1, [0, 0, 0]];" \n
+                         "FHQ_Sand setDropInterval 0.07;" \n
+                         "" \n
+                         "" \n
+                         "_effectList = _effectList + [[FHQ_Sand, true]];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="Update";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "delete_sand">*/
+                class delete_sand
+                {
+                        name = "delete_sand";
+                        itemno = 20;
+                        init = /*%FSM<STATEINIT""">*/"_effectList = _effectList - [[FHQ_Sand, true]];" \n
+                         "" \n
+                         "deleteVehicle FHQ_Sand;" \n
+                         "FHQ_Sand = nil;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "_">*/
+                                class _
+                                {
+                                        itemno = 4;
+                                        priority = 0.000000;
+                                        to="Update";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="Start";
+        finalStates[] =
+        {
+                "Not_a_client",
+        };
+};
+/*%FSM</COMPILE>*/
