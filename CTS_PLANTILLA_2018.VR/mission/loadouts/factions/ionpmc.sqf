@@ -7,7 +7,7 @@
 
 _factionID = "IONPMC";
 _factionName = "I.O.N. PMC";
-_factionStructure = "MID-TIER";
+_factionStructure = "HIGH-TIER";
 
 _factionCallsigns = _defaultCallsignINDFOR;
 
@@ -33,7 +33,7 @@ _commonAT = _AT4;
 _specAT = _M136;
 _commonSMG = _PDW;
 _commonRCO = "rhsusf_acc_ACOG2";
-_commonCCO = "FHQ_optic_AIM";
+_commonCCO = "rhsusf_acc_eotech_552";
 _commonMAGNIFIED = "rhsusf_acc_premier_low";
 _commonSUPPRESSOR = "muzzle_snds_M";
 _commonPISTOLSUPPRESSOR = "muzzle_snds_L";

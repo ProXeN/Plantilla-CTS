@@ -1,8 +1,0 @@
-
-#define FACTION_INFO 0
-
-#define FACTION_SIDE 0
-#define FACTION_NAME 2
-#define FACTION_CALLSIGNS 3
-
-#define FACTION_SKILL 6
