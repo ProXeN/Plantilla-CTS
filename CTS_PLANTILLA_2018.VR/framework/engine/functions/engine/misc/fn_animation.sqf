@@ -904,7 +904,7 @@ if (isNil "_ignoreAnim") then {
 //	PRE-EXECUTION UNIT SETTINGS
 //	-----------------------------------
 #define SWITCHMOVE_MP(ANIM)	([_unit,ANIM] remoteExec ["switchMove", 0, true])
-#define PLAYMOVENOW_MP(ANIM)	([_unit,ANIM] remoteExec ["playMoveNow", _unit, true])
+#define PLAYMOVENOW_MP(ANIM)	([_unit,ANIM] remoteExec ["playMoveNow", 0, true])
 
 //	Remove some equipments by order
 if (!_hasWeapon) then {

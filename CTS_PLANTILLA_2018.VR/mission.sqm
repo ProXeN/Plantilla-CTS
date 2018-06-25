@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=127;
+		nextID=131;
 	};
 	class Camera
 	{
-		pos[]={1488.3346,25.17248,1312.1744};
-		dir[]={-0.161194,-0.9335444,-0.32035181};
-		up[]={-0.41961631,0.35843635,-0.833933};
-		aside[]={-0.89334238,-7.5058779e-008,0.44950944};
+		pos[]={1526.7174,42.125263,1550.8269};
+		dir[]={0.10263576,-0.51922423,0.84856838};
+		up[]={0.062363919,0.85454094,0.51561165};
+		aside[]={0.9928562,8.7585067e-007,-0.12008613};
 	};
 };
 binarizationWanted=0;
@@ -5104,7 +5104,7 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{0 = [this, ""SIT_HIGH2"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this; }";
+						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""SIT_HIGH2"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this; }";
 						name="ambientlead";
 					};
 					id=430;
@@ -5113,6 +5113,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -5131,7 +5150,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -5150,7 +5169,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						nAttributes=3;
 					};
 				};
 			};
@@ -6224,7 +6243,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="call{if (isServer) then {[this] execVM ""mission\custom-scripts\scripts\hablar.sqf"";};}";
+						init="call{if (isServer) then {[this] execVM ""mission\custom-scripts\scripts\hablar.sqf"";}; this setVariable [""f_removeBodyEH"", true]}";
 						name="Contacto";
 					};
 					id=512;
@@ -6232,6 +6251,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -6250,7 +6288,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -6269,7 +6307,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						nAttributes=3;
 					};
 				};
 			};
@@ -7417,7 +7455,7 @@ class Mission
 				position[]={1490.7841,5,1293.644};
 			};
 			title="Ejemplo NPC";
-			description="Te deja hablar con el y activa la conversación ""CTS_Saludo"". La conversación la podéis modificar en ""mission\custom-scripts\initPlayer.sqf""";
+			description="Te deja hablar con el y activa la conversación ""CTS_Saludo"". La conversación la podéis modificar en ""mission\custom-scripts\initPlayer.sqf"". La variable f_removeBodyEH en true evita que el cadaver se borre.";
 			id=800;
 		};
 		class Item141
@@ -10950,13 +10988,32 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{0 = [this, ""REPAIR_VEH_KNEEL"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
+						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""REPAIR_VEH_KNEEL"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=431;
 					type="B_engineer_F";
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -10975,7 +11032,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -10994,7 +11051,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						nAttributes=3;
 					};
 				};
 			};
@@ -11024,13 +11081,32 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{0 = [this, ""REPAIR_VEH_STAND"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
+						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""REPAIR_VEH_STAND"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=432;
 					type="B_engineer_F";
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -11049,7 +11125,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -11068,7 +11144,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						nAttributes=3;
 					};
 				};
 			};
@@ -11089,7 +11165,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1519.5807,5.0014391,1324.3834};
+						position[]={1519.5811,5.0014391,1324.3831};
 						angles[]={0,0.80796528,0};
 					};
 					side="West";
@@ -11098,13 +11174,32 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{0 = [this, ""REPAIR_VEH_PRONE"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
+						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""REPAIR_VEH_PRONE"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=433;
 					type="B_engineer_F";
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -11123,7 +11218,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -11142,7 +11237,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						nAttributes=3;
 					};
 				};
 			};
@@ -11172,7 +11267,7 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{0 = [this, ""TALKING"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
+						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""TALKING"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
 						name="ambient1";
 					};
 					id=434;
@@ -11181,6 +11276,25 @@ class Mission
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -11199,7 +11313,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -11218,7 +11332,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						nAttributes=3;
 					};
 				};
 			};
@@ -11249,13 +11363,32 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{0 = [this, ""SIT_LOW"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
+						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""SIT_LOW"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=435;
 					type="B_crew_F";
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -11274,7 +11407,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -11293,7 +11426,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						nAttributes=3;
 					};
 				};
 			};
@@ -11323,13 +11456,32 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{0 = [this, ""SIT_LOW"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
+						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""SIT_LOW"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=436;
 					type="B_medic_F";
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -11348,7 +11500,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -11367,7 +11519,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						nAttributes=3;
 					};
 				};
 			};
@@ -11397,13 +11549,32 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{0 = [this, ""STAND_U"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
+						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""STAND_U"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=437;
 					type="B_Soldier_unarmed_F";
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -11422,7 +11593,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -11441,7 +11612,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						nAttributes=3;
 					};
 				};
 			};
@@ -11471,13 +11642,32 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{0 = [this, ""TALKING"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
+						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""TALKING"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=438;
 					type="B_engineer_F";
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -11496,7 +11686,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -11515,7 +11705,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						nAttributes=3;
 					};
 				};
 			};
@@ -11536,7 +11726,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1522.9695,5.4760399,1292.9677};
+						position[]={1522.969,5.476439,1292.968};
 						angles[]={0,4.2050738,0};
 					};
 					side="West";
@@ -11545,14 +11735,33 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{0 = [this, ""SIT_AT_TABLE"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
+						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""SIT_AT_TABLE"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=439;
 					type="B_Soldier_unarmed_F";
-					atlOffset=0.47460079;
+					atlOffset=0.4749999;
 					class CustomAttributes
 					{
 						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
 						{
 							property="speaker";
 							expression="_this setspeaker _value;";
@@ -11571,7 +11780,7 @@ class Mission
 								};
 							};
 						};
-						class Attribute1
+						class Attribute2
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -11590,7 +11799,7 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						nAttributes=3;
 					};
 				};
 			};
@@ -11598,7 +11807,7 @@ class Mission
 			{
 			};
 			id=923;
-			atlOffset=0.47460079;
+			atlOffset=0.4749999;
 		};
 		class Item246
 		{

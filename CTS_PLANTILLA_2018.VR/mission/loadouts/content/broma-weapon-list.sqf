@@ -19,6 +19,9 @@ _200rnd556 = "rhsusf_200Rnd_556x45_soft_pouch";
 _200rnd556M = "rhs_200rnd_556x45_M_SAW";
 _200rnd556T = "rhs_200rnd_556x45_T_SAW";
 
+// 5.7 P90
+_50Rnd57 = "FHQ_50Rnd_57x28_Mag";
+_50Rnd57Tracer = "FHQ_50Rnd_57x28_Red_Tracers_Mag";
 
 // 4.6 SMG
 _40rnd46x30FMJ = "rhsusf_mag_40Rnd_46x30_FMJ";
@@ -109,8 +112,12 @@ _M249S = ["rhs_weap_m249_pip_S", _200rnd556M];
 _M249L = ["rhs_weap_m249_pip_L", _200rnd556M];
 _M249Minimi = ["rhs_weap_minimi_para_railed", _200rnd556M];
 
-// SKS SG Works
+// CTS Weapons
 _SKSBullpup = ["SMA_SKS_F",_20Rnd762SKS];
+_Bulldog = ["CTS_Bulldog", _20Rnd762];
+_VHS = ["cro_vhs_d2", _30rnd556STANAG];
+_VHSGL = ["cro_vhs_d2_gl", _30rnd556STANAG,_40mm];
+_P90 = ["FHQ_smg_p90_black", _50Rnd57];
 
 // 320
 _M320 = ["rhs_weap_M320",_40mm];

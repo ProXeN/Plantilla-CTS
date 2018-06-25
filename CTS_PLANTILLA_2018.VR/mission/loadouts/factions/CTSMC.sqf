@@ -25,8 +25,8 @@ _factionSkill = [[0.7,0.8],   [0.8,0.9],      [0.7,0.8],     [0.7,0.9],      [0.
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _RHSHK416D145;
-_commonRIFLEGL = _RHSHK416D145M320;
+_commonRIFLE = _VHS;
+_commonRIFLEGL = _VHSGL;
 _commonPISTOL = _FNP45;
 _commonMG = _M249L;
 _commonMARKSMAN = _EMRBlack;
@@ -34,7 +34,7 @@ _commonSNIPER = _GM6;
 _commonAT = _AT4;
 _specAT = _TitanAT;
 _specAA = _TitanAA;
-_commonSMG = _Vermin;
+_commonSMG = _P90;
 _commonRCO = _SMASpecterBlack;
 _commonCCO = _RHSCCO;
 _commonMAGNIFIED = _AMS;
