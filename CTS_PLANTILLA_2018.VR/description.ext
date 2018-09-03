@@ -96,6 +96,23 @@ class CfgSounds {
     };
 };
 
+
+// ============================================================================
+//    Discord Rich Presence                                                   |
+// ============================================================================
+
+class CfgDiscordRichPresence {
+    applicationID="419919724256952323";             // Provided by discord
+    defaultDetails="www.ctsimulacion.com";            // Upper text
+    defaultState="Operación Cooperativa";              // Lower text   
+    defaultLargeImageKey="cts";      // Large image
+    defaultSmallImageKey="arma3"     // Small image
+};
+
+// ============================================================================
+//    Radio Sounds                                                            |
+// ============================================================================
+
 class CfgRadio {
     sounds[] = {};
         class Start1 {
@@ -114,6 +131,10 @@ class CfgRadio {
             title = "";
         };
  };
+
+// ============================================================================
+//    Carrier Settings                                                        |
+// ============================================================================
 
  class CfgCarrier
 {

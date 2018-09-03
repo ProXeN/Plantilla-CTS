@@ -47,6 +47,14 @@ mission_init = [] execVM "mission\custom-scripts\init.sqf";
 
 framework_init_time = (diag_tickTime - startTime);
 
+// Update Discord Rich Presence. ====================================
+
+[
+    ["UpdateState",briefingName]
+] call DiscordRichPresence_fnc_update;
+
+// End Loading. ====================================
+
 ["LOCAL", "LOG", "=========================================================================================================="] call BRM_fnc_doLog;
 ["LOCAL", "F_LOG", format ["BROMA FRAMEWORK INITIALIZED SUCCESSFULLY IN %1 SECONDS.", framework_init_time]] call BRM_fnc_doLog;
 ["LOCAL", "LOG", "=========================================================================================================="] call BRM_fnc_doLog;
