@@ -58,7 +58,7 @@ _countAT = 2;
 _countGRENADES = 2;
 _count40mm = 8;
 
-_commonTracer = _30rnd556STANAGT;
+_commonTracer = _30rnd556VHST;
 _countTracerRIFLE = 3;
 _countTracerMG = 1;
 _countHE = 1;

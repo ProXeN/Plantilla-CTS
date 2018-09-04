@@ -14,6 +14,8 @@
 // 5.56 AR & LMG
 _30rnd556STANAG = "rhs_mag_30Rnd_556x45_Mk262_Stanag";
 _30rnd556STANAGT = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
+_30rnd556VHS = "rhsgref_30rnd_556x45_vhs2";
+_30rnd556VHST = "rhsgref_30rnd_556x45_vhs2_t";
 _100rnd556 = "rhsusf_100Rnd_556x45_soft_pouch";
 _200rnd556 = "rhsusf_200Rnd_556x45_soft_pouch";
 _200rnd556M = "rhs_200rnd_556x45_M_SAW";
@@ -115,8 +117,8 @@ _M249Minimi = ["rhs_weap_minimi_para_railed", _200rnd556M];
 // CTS Weapons
 _SKSBullpup = ["SMA_SKS_F",_20Rnd762SKS];
 _Bulldog = ["CTS_Bulldog", _20Rnd762];
-_VHS = ["cro_vhs_d2", _30rnd556STANAG];
-_VHSGL = ["cro_vhs_d2_gl", _30rnd556STANAG,_40mm];
+_VHS = ["rhs_weap_vhsd2", _30rnd556VHS];
+_VHSGL = ["rhs_weap_vhsd2_bg", _30rnd556VHS,_40mm];
 _P90 = ["FHQ_smg_p90_black", _50Rnd57];
 
 // 320

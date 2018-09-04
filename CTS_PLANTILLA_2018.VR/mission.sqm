@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=131;
+		nextID=133;
 	};
 	class Camera
 	{
-		pos[]={1526.7174,42.125263,1550.8269};
-		dir[]={0.10263576,-0.51922423,0.84856838};
-		up[]={0.062363919,0.85454094,0.51561165};
-		aside[]={0.9928562,8.7585067e-007,-0.12008613};
+		pos[]={1508.0555,18.305023,1293.8845};
+		dir[]={-0.45020267,-0.64325404,0.61946636};
+		up[]={-0.3782351,0.76554739,0.52044082};
+		aside[]={0.80900723,5.117181e-007,0.58795595};
 	};
 };
 binarizationWanted=0;
@@ -154,6 +154,7 @@ addons[]=
 	"A3_Structures_F_EPC_Civ_Garbage",
 	"A3_Structures_F_Mil_Flags",
 	"A3_Structures_F_Exp_Walls_BackAlleys",
+	"ace_logistics_wirecutter",
 	"A3_Signs_F_Signs_Ad",
 	"A3_Structures_F_Mil_Offices",
 	"A3_Rocks_F",
@@ -167,7 +168,6 @@ addons[]=
 	"A3_Structures_F_Ind_Cargo",
 	"A3_Structures_F_Heli_Ind_Cargo",
 	"A3_Structures_F_Ind_DieselPowerPlant",
-	"chernarusredux_buildings_a2",
 	"A3_Props_F_Orange_Humanitarian_Supplies",
 	"A3_Structures_F_Civ_Lamps",
 	"A3_Structures_F_EPB_Civ_Camping",
@@ -699,44 +699,46 @@ class AddonsMetaData
 		};
 		class Item77
 		{
+			className="ace_logistics_wirecutter";
+			name="ACE3 - Logistics Wire Cutter";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item78
+		{
 			className="A3_Rocks_F";
 			name="Arma 3 - Rocks and Stones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item78
+		class Item79
 		{
 			className="mbplat";
 			name="mbplat";
 		};
-		class Item79
+		class Item80
 		{
 			className="CUP_Editor_Structures_Config";
 			name="CUP_Editor_Structures_Config";
 		};
-		class Item80
+		class Item81
 		{
 			className="CUP_Misc3_Config";
 			name="CUP_Misc3_Config";
 		};
-		class Item81
+		class Item82
 		{
 			className="A3_Static_F_Jets";
 			name="Arma 3 Jets - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item82
+		class Item83
 		{
 			className="A3_Structures_F_Orange";
 			name="Arma 3 Orange - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
-		};
-		class Item83
-		{
-			className="chernarusredux_buildings_a2";
-			name="chernarusredux_buildings_a2";
 		};
 		class Item84
 		{
@@ -1984,7 +1986,6 @@ class Mission
 			};
 			id=254;
 			type="B_MRAP_01_hmg_F";
-			atlOffset=0.00018405914;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -6362,7 +6363,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1504.41,5.0014391,1292.55};
+						position[]={1504.5,5.0014391,1292.55};
 					};
 					side="West";
 					flags=6;
@@ -6377,7 +6378,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1504.41,5.0014391,1292.55};
+						position[]={1504.5,5.0014391,1292.55};
 					};
 					side="West";
 					flags=4;
@@ -74096,7 +74097,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1504.4058,6.8651338,1292.506};
+				position[]={1504.5,7.7938638,1292.5093};
 			};
 			side="West";
 			flags=6;
