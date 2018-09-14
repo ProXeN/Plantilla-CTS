@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1475.4036,11.785494,1288.6415};
-		dir[]={-0.034851704,-0.83733654,0.54579443};
-		up[]={-0.053362664,0.54661679,0.83566946};
-		aside[]={0.99807376,-1.822511e-006,0.063737586};
+		pos[]={1496.3901,9.2798014,1298.6345};
+		dir[]={-0.78882664,-0.56985158,-0.23078801};
+		up[]={-0.5470587,0.82163787,-0.16005479};
+		aside[]={-0.28083551,4.2980537e-007,0.95986873};
 	};
 };
 binarizationWanted=0;
@@ -5162,7 +5162,7 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""SIT_HIGH2"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this; }";
+						init="call{(group this) setVariable [""Vcm_Disable"",true]; [this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""SIT_HIGH2"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this; }";
 						name="ambientlead";
 					};
 					id=430;
@@ -11046,7 +11046,7 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""REPAIR_VEH_KNEEL"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
+						init="call{(group this) setVariable [""Vcm_Disable"",true]; [this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""REPAIR_VEH_KNEEL"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=431;
 					type="B_engineer_F";
@@ -11139,7 +11139,7 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""REPAIR_VEH_STAND"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
+						init="call{(group this) setVariable [""Vcm_Disable"",true]; [this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""REPAIR_VEH_STAND"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=432;
 					type="B_engineer_F";
@@ -11232,7 +11232,7 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""REPAIR_VEH_PRONE"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
+						init="call{(group this) setVariable [""Vcm_Disable"",true]; [this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""REPAIR_VEH_PRONE"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=433;
 					type="B_engineer_F";
@@ -11325,7 +11325,7 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""TALKING"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
+						init="call{(group this) setVariable [""Vcm_Disable"",true]; [this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""TALKING"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
 						name="ambient1";
 					};
 					id=434;
@@ -11421,7 +11421,7 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""SIT_LOW"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
+						init="call{(group this) setVariable [""Vcm_Disable"",true]; [this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""SIT_LOW"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=435;
 					type="B_crew_F";
@@ -11514,7 +11514,7 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""SIT_LOW"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
+						init="call{(group this) setVariable [""Vcm_Disable"",true]; [this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""SIT_LOW"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=436;
 					type="B_medic_F";
@@ -11607,7 +11607,7 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""STAND_U"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
+						init="call{(group this) setVariable [""Vcm_Disable"",true]; [this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""STAND_U"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=437;
 					type="B_Soldier_unarmed_F";
@@ -11700,7 +11700,7 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""TALKING"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
+						init="call{(group this) setVariable [""Vcm_Disable"",true]; [this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""TALKING"", false, ""ASIS""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=438;
 					type="B_engineer_F";
@@ -11793,7 +11793,7 @@ class Mission
 					{
 						skill=0.64966577;
 						lock="LOCKED";
-						init="call{[this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""SIT_AT_TABLE"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
+						init="call{(group this) setVariable [""Vcm_Disable"",true]; [this, ""side_a""] call BRM_fnc_initAI; 0 = [this, ""SIT_AT_TABLE"", false, ""LIGHT""] spawn BRM_fnc_animation; doStop this}";
 					};
 					id=439;
 					type="B_Soldier_unarmed_F";
@@ -74160,7 +74160,7 @@ class Mission
 			flags=6;
 			class Attributes
 			{
-				init="call{[chopper1] call BRM_transport_fnc_addTransportAction;}";
+				init="call{(group this) setVariable [""Vcm_Disable"",true]; [chopper1] call BRM_transport_fnc_addTransportAction;}";
 				name="chopper1";
 			};
 			id=3051;
@@ -77678,7 +77678,7 @@ class Mission
 				position[]={1492.579,5,1293.924};
 			};
 			title="(group this) setVariable [""Vcm_Disable"",true];";
-			description="Es importante colocar esto en el init de una unidad o el lider de un grupo que NO queráis que controle VCOM. Esto es útil para evitar que la IA haga cosas que no queráis, como llamar refuerzos, ponerse a cubierto o flanquear. USADLO EN IA QUE NO QUERAIS QUE COMBATA, COMO REHENES O VIPS.";
+			description="Es importante colocar esto en el init de una unidad o el lider de un grupo que NO queráis que controle VCOM. Esto es útil para evitar que la IA haga cosas que no queráis, como llamar refuerzos, ponerse a cubierto o flanquear. USADLO EN IA QUE NO QUERAIS QUE COMBATA, COMO REHENES O VIPS. IMPORTANTÍSIMO PONÉRSELO A LOS DRONES, LOS TAXIS Y LA IA HACIENDO ANIMACIONES.";
 			id=3143;
 		};
 		class Item1384
