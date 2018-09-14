@@ -8,7 +8,7 @@ class EditorData
 	toggles=38;
 	class ItemIDProvider
 	{
-		nextID=3143;
+		nextID=3145;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=141;
+		nextID=149;
 	};
 	class Camera
 	{
-		pos[]={1501.2661,18.775606,1297.9402};
-		dir[]={-0.71485347,-0.49908242,0.49003732};
-		up[]={-0.411778,0.86645377,0.28227577};
-		aside[]={0.56546754,5.7282159e-007,0.8248992};
+		pos[]={1475.4036,11.785494,1288.6415};
+		dir[]={-0.034851704,-0.83733654,0.54579443};
+		up[]={-0.053362664,0.54661679,0.83566946};
+		aside[]={0.99807376,-1.822511e-006,0.063737586};
 	};
 };
 binarizationWanted=0;
@@ -168,6 +168,7 @@ addons[]=
 	"A3_Structures_F_Ind_Cargo",
 	"A3_Structures_F_Heli_Ind_Cargo",
 	"A3_Structures_F_Ind_DieselPowerPlant",
+	"chernarusredux_buildings_a2",
 	"A3_Props_F_Orange_Humanitarian_Supplies",
 	"A3_Structures_F_Civ_Lamps",
 	"A3_Structures_F_EPB_Civ_Camping",
@@ -198,7 +199,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=92;
+		items=93;
 		class Item0
 		{
 			className="A3_Supplies_F_Heli";
@@ -758,54 +759,59 @@ class AddonsMetaData
 		};
 		class Item84
 		{
+			className="chernarusredux_buildings_a2";
+			name="chernarusredux_buildings_a2";
+		};
+		class Item85
+		{
 			className="ace_interaction";
 			name="ACE3 - Interaction";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item85
+		class Item86
 		{
 			className="A3_Structures_F_Exp_Industrial";
 			name="Arma 3 Apex - Industrial Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item86
+		class Item87
 		{
 			className="RHS_US_A2_AirImport";
 			name="RHSUSF A2 Air Ports";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item87
+		class Item88
 		{
 			className="A3_Props_F_Jets";
 			name="Arma 3 Jets - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item88
+		class Item89
 		{
 			className="A3_Static_F_Destroyer";
 			name="CFGPATCHES_A3_Static_F_Destroyer";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item89
+		class Item90
 		{
 			className="A3_Props_F_Destroyer";
 			name="CFGPATCHES_A3_Props_F_Destroyer";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item90
+		class Item91
 		{
 			className="A3_Boat_F";
 			name="Arma 3 Alpha - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item91
+		class Item92
 		{
 			className="A3_Boat_F_Destroyer";
 			name="Arma 3 Jets - Boats and Submersibles";
@@ -843,7 +849,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1383;
+		items=1385;
 		class Item0
 		{
 			dataType="Object";
@@ -6295,7 +6301,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="call{if (isServer) then {[this] execVM ""mission\custom-scripts\scripts\hablar.sqf"";}; this setVariable [""f_removeBodyEH"", true]}";
+						init="call{if (isServer) then {[this] execVM ""mission\custom-scripts\scripts\hablar.sqf"";}; this setVariable [""f_removeBodyEH"", true]; (group this) setVariable [""Vcm_Disable"",true];}";
 						name="Contacto";
 					};
 					id=512;
@@ -77663,6 +77669,28 @@ class Mission
 			};
 			id=3141;
 			atlOffset=8.9645386e-005;
+		};
+		class Item1383
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={1492.579,5,1293.924};
+			};
+			title="(group this) setVariable [""Vcm_Disable"",true];";
+			description="Es importante colocar esto en el init de una unidad o el lider de un grupo que NO queráis que controle VCOM. Esto es útil para evitar que la IA haga cosas que no queráis, como llamar refuerzos, ponerse a cubierto o flanquear. USADLO EN IA QUE NO QUERAIS QUE COMBATA, COMO REHENES O VIPS.";
+			id=3143;
+		};
+		class Item1384
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={1492.592,5,1294.7791};
+			};
+			title="this setVariable [""f_removeBodyEH"", true];";
+			description="Colocad esto en el Init de unidades y/o objetos que NO queréis que se borren automáticamente pasados unos minutos después de morir. Útil para misiones en las que hay que registrar un cadáver, o queréis que los jugadores se encuentren muertos por X razón.";
+			id=3144;
 		};
 	};
 	class Connections
