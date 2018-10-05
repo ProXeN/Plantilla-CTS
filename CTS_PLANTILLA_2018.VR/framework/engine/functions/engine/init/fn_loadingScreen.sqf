@@ -14,10 +14,9 @@ _u enableSimulation false;
 showMap false;
 
 while {(_c != 100)} do {
-	private "_msg";
 	_c = _c + 1;
 
-	_msg = format ["
+	private _msg = format ["
 		<br/>
 		<t align='left' size='1.1' color='#E6E6E6'>Iniciando Mision: </t>
 		<t size='1.1' align='left' color='#F7D358' font='PuristaBold'>%1&#0037;</t><t size='1.1' align='left' color='#A1A4AD'></t><br/><br/>
@@ -36,8 +35,7 @@ sleep 5;
 _u enableSimulation true;
 showMap true;
 
-private "_msg";
-_msg = format ["
+private _msg = format ["
 	<br/>
 	<t size='1.1' color='#FFFFFF' align='left'>Mision Cargada</t>
 	<t size='1' align='left' color='#9DA698'><br/><br/>
