@@ -116,7 +116,7 @@ case "APEX": {
     select (date select 1);
     ["Intro", false] call BRM_Intros_fnc_blackOut;
     // TIMELINE Y VIDEO PARA CAMPAÑAS
-    //_video = ["\CTS_assets\videos\quote_1.ogv"] call BRM_Intros_fnc_video;
+    //_video = ["\CTS_assets\videos\quote1.ogv"] call BRM_Intros_fnc_video;
     //waitUntil {scriptDone _video};
     //sleep 2;
     //_timeline = ["Mision_1"] spawn BRM_Intros_fnc_Timeline;
@@ -129,9 +129,9 @@ case "APEX": {
     _present = ["<img size= '4' shadow='false' image='mission\images\group-logo.paa'/><br/><br/><t size='.7' color='#FFFFFF'>PRESENTA</t>",0,0.4,4.5,-1] spawn bis_fnc_dynamicText;
     enableSentences true;
     switch (_sound) do{
-      case 0: {player globalRadio "Start1"; ["HQ", "De acuerdo caballeros, solo tenemos una oportunidad. Adelante. Corto"] call BIS_fnc_showSubtitle;};
-      case 1: {player globalRadio "Start2"; ["HQ", "A todas las unidades. ¡Nos movemos!"] call BIS_fnc_showSubtitle;};
-      case 2: {player globalRadio "Start3"; ["HQ", "Procedan con la operación. Buena suerte. Corto."] call BIS_fnc_showSubtitle;};
+      case 0: {player globalRadio "Start1"; [[["HQ", "De acuerdo caballeros, solo tenemos una oportunidad. Adelante. Corto"]],"SIDE",0.10] spawn BRM_fnc_simpleConv;};
+      case 1: {player globalRadio "Start2"; [[["HQ", "A todas las unidades. ¡Nos movemos!"]],"SIDE",0.10] spawn BRM_fnc_simpleConv;};
+      case 2: {player globalRadio "Start3"; [[["HQ", "Procedan con la operación. Buena suerte. Corto."]],"SIDE",0.10] spawn BRM_fnc_simpleConv;};
     };
     waitUntil {scriptDone _present};
     enableSentences false;
