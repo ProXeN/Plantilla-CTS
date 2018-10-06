@@ -21,6 +21,4 @@
 
     playSound "cambiarRopa";
 
-    sleep 3;
-
-    titleText ["", "BLACK IN", 1];
+    [{titleText ["", "BLACK IN", 1]}, [], 3] call CBA_fnc_waitAndExecute;

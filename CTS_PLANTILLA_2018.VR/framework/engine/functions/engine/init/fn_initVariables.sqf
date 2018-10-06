@@ -75,6 +75,7 @@ if(isNil"blu_4_2_3")then{blu_4_2_3=objNull}; if(isNil"blu_4_2_4")then{blu_4_2_4=
 
 if(isNil"blu_5_0_1")then{blu_5_0_1=objNull}; if(isNil"blu_5_0_2")then{blu_5_0_2=objNull};
 if(isNil"blu_5_0_3")then{blu_5_0_3=objNull}; if(isNil"blu_5_0_4")then{blu_5_0_4=objNull};
+if(isNil"blu_5_0_5")then{blu_5_0_5=objNull};
 
 if(isNil"blu_6_0_1")then{blu_6_0_1=objNull}; if(isNil"blu_6_0_2")then{blu_6_0_2=objNull};
 if(isNil"blu_6_0_3")then{blu_6_0_3=objNull}; if(isNil"blu_6_0_4")then{blu_6_0_4=objNull};
