@@ -29,11 +29,11 @@ if (!isRemoteExecuted && isMultiplayer) then {
 
 	mission_running = false; publicVariable "mission_running";
 
-	params ["_ending"];
+	params ["_ending", "_victory"];
 
-	[_ending] remoteExec ["BRM_fnc_callEnding", 0];
+	[_ending, _victory] remoteExec ["BRM_fnc_callEnding", 0];
 } else {
-	params ["_ending"];
+	params ["_ending", "_victory"];
 
 	if (hasInterface) then {
 		player allowDamage false;
@@ -41,5 +41,5 @@ if (!isRemoteExecuted && isMultiplayer) then {
 
 	if (isServer) then { sleep 3 };
 
-	[_ending] spawn BIS_fnc_endMission;
+	[_ending, _victory] spawn BIS_fnc_endMission;
 };
