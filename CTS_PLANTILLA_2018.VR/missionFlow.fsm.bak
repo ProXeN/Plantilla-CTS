@@ -35,7 +35,7 @@ link15[] = {10,3};
 link16[] = {11,12};
 link17[] = {13,14};
 globals[] = {0.000000,0,0,0,0,640,480,1,43,6316128,1,-873.516479,387.792542,4398.596680,3674.625977,1230,706,1};
-window[] = {0,-1,-1,-1,-1,1017,154,2633,154,1,1243};
+window[] = {0,-1,-1,-1,-1,1105,242,2721,242,1,1243};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -247,7 +247,7 @@ class FSM
                 {
                         name = "End";
                         itemno = 12;
-                        init = /*%FSM<STATEINIT""">*/"[""victory""] spawn BRM_fnc_callEnding;"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"[""victory"", true] spawn BRM_fnc_callEnding;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -260,7 +260,7 @@ class FSM
                         name = "FAIL";
                         itemno = 14;
                         init = /*%FSM<STATEINIT""">*/"[""taskRescue"", ""failed""] call FHQ_fnc_ttSetTaskState;" \n
-                         "[endings_defeat] call BRM_fnc_callEnding;"/*%FSM</STATEINIT""">*/;
+                         "[""defeat"", false] spawn BRM_fnc_callEnding;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
