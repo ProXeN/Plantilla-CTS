@@ -5,7 +5,7 @@ if (isNil "_defaultVoice") then { _defaultVoice = _voiceAMERICAN };
 if (isNil "_defaultInsignia") then { _defaultInsignia = "none" };
 
 _defaultCallsignBLUFOR =
-["Zero", "Raptor", "Hornet", "Arrow", "Breacher", "Straw", "Foxtrot", "Titan", "Lancer", "Sabre", "Spartan"];
+["Zero", "Raptor", "Hornet", "Arrow", "Breacher", "Straw", "Foxtrot", "Titan", "Lancer", "Spartan", "Spartan"];
 
 _defaultCallsignOPFOR =
 ["Godfather", "Anaconda", "Boa", "Cobra", "Dragon", "Raven", "Scorpion", "Weasel", "Sparrow", "Pelican", "Moose"];

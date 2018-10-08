@@ -50,7 +50,7 @@ private [
 #define BIPOD 3
 
 _defaultCallsignBLUFOR =
-["Zero", "Raptor", "Hornet", "Arrow", "Breacher", "Straw", "Foxtrot", "Titan", "Lancer", "Sabre", "Spartan"];
+["Zero", "Raptor", "Hornet", "Arrow", "Breacher", "Straw", "Foxtrot", "Titan", "Lancer", "Spartan", "Spartan"];
 
 _defaultCallsignOPFOR =
 ["Godfather", "Anaconda", "Boa", "Cobra", "Dragon", "Raven", "Scorpion", "Weasel", "Sparrow", "Pelican", "Moose"];

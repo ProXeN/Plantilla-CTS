@@ -21,10 +21,6 @@ _200rnd556 = "rhsusf_200Rnd_556x45_soft_pouch";
 _200rnd556M = "rhs_200rnd_556x45_M_SAW";
 _200rnd556T = "rhs_200rnd_556x45_T_SAW";
 
-// 5.7 P90
-_50Rnd57 = "FHQ_50Rnd_57x28_Mag";
-_50Rnd57Tracer = "FHQ_50Rnd_57x28_Red_Tracers_Mag";
-
 // 4.6 SMG
 _40rnd46x30FMJ = "rhsusf_mag_40Rnd_46x30_FMJ";
 _40rnd46x30JHP = "rhsusf_mag_40Rnd_46x30_JHP";
@@ -89,7 +85,7 @@ _RHSM4GL203 = ["rhs_weap_m4_m203",_30rnd556STANAG,_40mm];
 
 // HK416
 _RHSHK416D10 = ["rhs_weap_hk416d10",_30rnd556STANAG];
-_RHSHK416D10M320 = ["rhs_weap_hk416d10_m320",_30rnd556STANAG];
+_RHSHK416D10M320 = ["rhs_weap_hk416d10_m320",_30rnd556STANAG,_40mm];
 _RHSHK416D10SOPMOD = ["rhs_weap_hk416d10_LMT",_30rnd556STANAG];
 _RHSHK416D145 = ["rhs_weap_hk416d145",_30rnd556STANAG];
 _RHSHK416D145M320 = ["rhs_weap_hk416d145_m320",_30rnd556STANAG,_40mm];
@@ -101,7 +97,7 @@ _RHSMP7DESERT = ["rhsusf_weap_MP7A1_desert",_40rnd46x30FMJ];
 _RHSMP7WINTER = ["rhsusf_weap_MP7A1_winter",_40rnd46x30FMJ];
 
 // Marksman
-_SR25 = ["rhs_weap_sr25", "rhsusf_20Rnd_762x51_m993_Mag"];
+_SR25 = ["rhs_weap_sr25", "rhsusf_20Rnd_762x51_SR25_m118_special_Mag"];
 _M2010 = ["rhs_weap_XM2010",_5rnd300win];
 _M14EBR = ["rhs_weap_m14ebrri",_20rnd762EBR];
 _M76 = ["rhs_weap_m76", _10rnd792];
@@ -119,7 +115,6 @@ _SKSBullpup = ["SMA_SKS_F",_20Rnd762SKS];
 _Bulldog = ["CTS_Bulldog", _20Rnd762];
 _VHS = ["rhs_weap_vhsd2", _30rnd556VHS];
 _VHSGL = ["rhs_weap_vhsd2_bg", _30rnd556VHS,_40mm];
-_P90 = ["FHQ_smg_p90_black", _50Rnd57];
 
 // 320
 _M320 = ["rhs_weap_M320",_40mm];

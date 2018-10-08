@@ -350,12 +350,14 @@ switch (true) do {
         [_unit, _helicrewHEAD, _helicrewUNIFORM, "V_TacVest_blk", _parachute] call BRM_fnc_useUniform;
         [_unit,[[_wsmoke,2],[_gsmoke,2],[_gchemlight,2],[_irGRENADEblufor,1],[_gFLARE,1]]] call BRM_fnc_addtoVest;
         [_unit, _commonSMG, _countRIFLELOW] call BRM_fnc_addWeaponKit;
+        _unit addGoggles "ake_fleeceblcv_bk";
     };
 
     case (_isHelicopterPilot): {
         [_unit, _helipilotHEAD, _helicrewUNIFORM, "V_TacVest_blk", _parachute] call BRM_fnc_useUniform;
         [_unit,[[_wsmoke,2],[_rsmoke,2]]] call BRM_fnc_addtoVest;
         [_unit, _commonSMG, _countRIFLELOW] call BRM_fnc_addWeaponKit;
+        _unit addGoggles "ake_fleeceblcv_bk";
     };
 
     case (_isCrewman): {
